@@ -68,6 +68,9 @@ if has("gui_running")
     " Remove GUI
     set guioptions=aAe
     set guitablabel=%(%m\ %)%f
+    " mayansmoke settings
+    let g:mayansmoke_special_key_visibility=2
+    let g:mayansmoke_cursor_line_visibility=2
 else
     set t_Co=256
     colorscheme herald
