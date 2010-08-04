@@ -19,7 +19,7 @@ set nocompatible
 set shortmess=a
 set showcmd
 set showmatch
-set matchpairs+=<:>
+"set matchpairs+=<:>
 set hlsearch
 set incsearch
 set ignorecase
