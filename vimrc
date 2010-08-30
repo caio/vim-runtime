@@ -182,6 +182,11 @@ let g:inkpot_black_background=1
 " Matchit plugin
 runtime macros/matchit.vim
 
+" Session plugin
+let g:session_autoload=0
+let g:session_autosave=1
+set sessionoptions-=help
+
 " Python synxtax file
 let python_highlight_all=1
 let python_slow_sync=1
