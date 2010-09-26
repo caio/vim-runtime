@@ -37,3 +37,9 @@
 [submodule "bundle/vim-cucumber"]
 	path = bundle/vim-cucumber
 	url = http://github.com/tpope/vim-cucumber.git
+[submodule "bundle/snipmate.vim"]
+	path = bundle/snipmate.vim
+	url = http://github.com/msanders/snipmate.vim.git
+[submodule "snippets"]
+	path = snippets
+	url = http://github.com/scrooloose/snipmate-snippets.git
