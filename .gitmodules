@@ -40,3 +40,6 @@
 [submodule "bundle/snipmate.vim"]
 	path = bundle/snipmate.vim
 	url = http://github.com/msanders/snipmate.vim.git
+[submodule "bundle/mac-classic-theme"]
+	path = bundle/mac-classic-theme
+	url = http://github.com/nelstrom/vim-mac-classic-theme.git
