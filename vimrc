@@ -143,22 +143,6 @@ imap <leader>p <C-O>:YRShow<CR>
 nmap <leader>p :YRShow<CR>
 let g:yankring_history_file='.yankring_history'
 
-" NERDTree
-imap <silent><F4> <C-O>:NERDTreeToggle<CR>
-nmap <silent><F4> :NERDTreeToggle<CR>
-
-" {{{ Taglist
-nmap <silent><F5> :Tlist<CR>
-imap <silent><F5> <C-O>:Tlist<CR>
-let Tlist_Use_Right_Window=1
-let Tlist_Auto_Open=0
-let Tlist_Enable_Fold_Column=0
-let Tlist_Compact_Format=1
-let Tlist_WinWidth=28
-let Tlist_Exit_OnlyWindow=1
-let Tlist_File_Fold_Auto_Close=1
-" }}}
-
 " TOhtml options
 let html_number_lines=1
 let html_use_css=1
@@ -171,9 +155,6 @@ map <silent> <unique> mv <Plug>Goto_prev_sign
 map <silent> <unique> mdd <Plug>Remove_all_signs
 map <silent> <unique> m. <Plug>Move_sign
 " }}}
-
-" Inkpot
-let g:inkpot_black_background=1
 
 " Matchit plugin
 runtime macros/matchit.vim
@@ -201,18 +182,6 @@ au! BufRead,BufNewFile *.pdc set ft=pdc
 au! BufRead,BufNewFile *.spim set ft=mips
 " }}}
 
-" {{{ OmniCPPComplete settings
-let OmniCpp_GlobalScopeSearch = 1
-let OmniCpp_SelectFirstItem = 2
-let OmniCpp_MayCompleteDot = 1 " autocomplete with .
-let OmniCpp_MayCompleteArrow = 1 " autocomplete with ->
-let OmniCpp_MayCompleteScope = 1 " autocomplete with ::
-let OmniCpp_SelectFirstItem = 2 " select first item (but don't insert)
-let OmniCpp_NamespaceSearch = 2 " search namespaces in this and included files
-let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype
-" }}}
-
-
 " Close the preview window automatically
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
@@ -221,6 +190,42 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 autocmd FileType python set ft=python.django
 autocmd FileType html set ft=html.django_template
 
+" Neocomplcache settings {{{
+let g:neocomplcache_enable_at_startup=1
+let g:neocomplcache_enable_smart_case=1
+let g:neocomplcache_enable_underbar_completion=1
+let g:neocomplcache_auto_completion_start_length=3
+let g:neocomplcache_manual_completion_start_length=1
+
+" Define keyword.
+if !exists('g:neocomplcache_keyword_patterns')
+    let g:neocomplcache_keyword_patterns = {}
+endif
+let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" Use ctrl+k for snippets
+imap <C-k> <Plug>(neocomplcache_snippets_expand)
+smap <C-k> <Plug>(neocomplcache_snippets_expand)
+
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplcache#close_popup()
+inoremap <expr><C-e>  neocomplcache#cancel_popup()
+" }}}
+
+" {{{ Omni Completion
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+" }}}
 
 " {{{ statusline
 set laststatus=2
