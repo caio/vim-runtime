@@ -172,10 +172,6 @@ map <silent> <unique> mdd <Plug>Remove_all_signs
 map <silent> <unique> m. <Plug>Move_sign
 " }}}
 
-" NERD Commenter
-nmap gc <leader>c<space>
-vmap gc <leader>c<space>
-
 " Inkpot
 let g:inkpot_black_background=1
 
