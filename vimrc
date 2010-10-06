@@ -93,6 +93,9 @@ imap <silent><leader>N <C-o>:bp<CR>
 imap <silent><leader>n <C-o>:bn<CR>
 imap  
 nmap  
+" Re-select block after (de)indent
+vnoremap < <gv
+vnoremap > >gv
 " }}}
 
 " {{{ Better navigation when 'wrap' is on
