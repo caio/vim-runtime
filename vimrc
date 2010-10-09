@@ -31,7 +31,7 @@ set wildignore+=*.o,*~,.lo,*.pyc
 set suffixes+=.in,.a
 set hidden
 set shiftwidth=4
-set tabstop=4
+set tabstop=8
 set smarttab
 set expandtab
 set softtabstop=4
