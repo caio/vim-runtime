@@ -162,6 +162,10 @@ map <silent> <unique> m. <Plug>Move_sign
 " Matchit plugin
 runtime macros/matchit.vim
 
+" Manpage plugin
+runtime ftplugin/man.vim
+nnoremap K :Man <cword><CR>
+
 " Session plugin
 let g:session_autoload=0
 let g:session_autosave=1
