@@ -234,6 +234,12 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " }}}
 
+" Persistent Undo
+if v:version > 702
+    set undofile
+    set undodir=/tmp,.,~/
+endif
+
 " {{{ statusline
 set laststatus=2
 set statusline=%2*
@@ -252,7 +258,7 @@ if has('title') && (has('gui_running') || &title)
     set titlestring+=\ -\ %{substitute(getcwd(),\ $HOME,\ '~',\ '')}
 endif
 " }}}
-"
+
 if (&term =~ "xterm") && (&termencoding == "")
     set termencoding=utf-8
 endif
