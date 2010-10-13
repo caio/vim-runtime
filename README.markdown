@@ -14,7 +14,6 @@ can be seen on [.gitmodules][6]. Credits go to these guys, not me ;)
 Other notable plugins are:
 
 - [number marks][2]
-- [supertab][3]
 - [yankring][4]
 - [slime][5]
 
@@ -40,7 +39,6 @@ And finally setup your environment:
 
 [1]: http://github.com/tpope/vim-pathogen
 [2]: http://www.vim.org/scripts/script.php?script_id=2194
-[3]: http://www.vim.org/scripts/script.php?script_id=1643
 [4]: http://www.vim.org/scripts/script.php?script_id=1234
 [5]: http://technotales.wordpress.com/2007/10/03/like-slime-for-vim/
 [6]: http://github.com/caio/vim-runtime/blob/master/.gitmodules
