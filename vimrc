@@ -58,8 +58,8 @@ set cmdheight=2
 
 " {{{ colors, fonts and gui
 if has("gui_running")
-    set guifont=Envy\ Code\ R\ 10
     colorscheme vitamins
+    set guifont=Envy\ Code\ R\ 10
     set number
     set cursorline
     " FontSize plugin
@@ -71,9 +71,10 @@ if has("gui_running")
     " mayansmoke settings
     let g:mayansmoke_special_key_visibility=2
     let g:mayansmoke_cursor_line_visibility=2
-else
-    set t_Co=256
+elseif &t_Co >= 256
     colorscheme herald
+else
+    colorscheme blackboard
 endif
 " }}}
 
