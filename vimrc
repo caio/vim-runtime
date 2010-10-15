@@ -122,7 +122,8 @@ nmap <silent><leader>b :FufBuffer<CR>
 " }}}
 
 " List trailing chars
-set listchars=tab:\➜\ ,trail:·,nbsp:-
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
 nmap <silent> <leader>s :set nolist!<CR>
 
 " Strip trailing whitespace
