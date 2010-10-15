@@ -24,6 +24,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+set gdefault
 set showfulltag
 set wildmenu
 set wildmode=list:longest
@@ -49,7 +50,6 @@ set noswapfile
 set title
 set noerrorbells
 set novisualbell
-set foldmethod=marker
 set completeopt=menu,preview,longest,menuone
 " reducing noise
 set more
@@ -60,7 +60,11 @@ set cmdheight=2
 if has("gui_running")
     colorscheme vitamins
     set guifont=Envy\ Code\ R\ 10
-    set number
+    if v:version > 702
+        set relativenumber
+    else
+        set number
+    endif
     set cursorline
     " FontSize plugin
     nmap <silent><A-+> :call LargerFont()<CR>
@@ -86,17 +90,24 @@ imap <silent><C-S-Tab> <C-O>gT
 " }}}
 
 " {{{ general mappings
-nmap <silent> <F3> :silent nohlsearch<CR>
-imap <silent> <F3> <C-o>:silent nohlsearch<CR>
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
 nmap <silent><leader>N :bp<CR>
 nmap <silent><leader>n :bn<CR>
 imap <silent><leader>N <C-o>:bp<CR>
 imap <silent><leader>n <C-o>:bn<CR>
 imap  
 nmap  
+nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <tab> %
+vnoremap <tab> %
+nnoremap / /\v
+vnoremap / /\v
 " Re-select block after (de)indent
 vnoremap < <gv
 vnoremap > >gv
+inoremap jj <ESC>
 " }}}
 
 " {{{ Better navigation when 'wrap' is on
@@ -121,9 +132,32 @@ imap <silent><leader>b <C-O>:FufBuffer<CR>
 nmap <silent><leader>b :FufBuffer<CR>
 " }}}
 
+" {{{ Better folding
+set foldmethod=marker
+set foldlevelstart=0
+
+function! MyFoldText()
+    let line = getline(v:foldstart)
+
+    let nucolwidth = &fdc + &number * &numberwidth
+    let windowwidth = winwidth(0) - nucolwidth - 3
+    let foldedlinecount = v:foldend - v:foldstart
+
+    " expand tabs into spaces
+    let onetab = strpart('          ', 0, &tabstop)
+    let line = substitute(line, '\t', onetab, 'g')
+
+    let line = strpart(line, 0, windowwidth - 2 -len(foldedlinecount))
+    let fillcharcount = windowwidth - len(line) - len(foldedlinecount) - 4
+    return line . '…' . repeat(" ",fillcharcount) . foldedlinecount . '…' . ' '
+endfunction
+set foldtext=MyFoldText()
+" }}}
+
+
 " List trailing chars
 set list
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
+set listchars=tab:▸\ ,trail:.,extends:#,nbsp:.
 nmap <silent> <leader>s :set nolist!<CR>
 
 " Strip trailing whitespace
@@ -168,6 +202,16 @@ runtime macros/matchit.vim
 runtime ftplugin/man.vim
 nnoremap K :Man <cword><CR>
 
+" Map Ack.vim to a faster keystroke
+nnoremap <leader>a :Ack
+
+" Better/Faster window handling
+nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 " Session plugin
 let g:session_autoload=0
 let g:session_autosave=1
@@ -180,15 +224,15 @@ let python_print_as_function=1
 
 " {{{ Non-standard syntaxes
 " ANTLR3 Syntax
-au BufRead,BufNewFile *.g set syntax=antlr3
+autocmd BufRead,BufNewFile *.g set syntax=antlr3
 " StringTemplate Syntax
-au BufRead,BufNewFile *.stg set syntax=stringtemplate
+autocmd BufRead,BufNewFile *.stg set syntax=stringtemplate
 " Markdown Syntax
-au! BufRead,BufNewFile *.md set ft=mkd
-au! BufRead,BufNewFile *.mkd set ft=mkd
-au! BufRead,BufNewFile *.pdc set ft=pdc
+autocmd! BufRead,BufNewFile *.md set ft=mkd
+autocmd! BufRead,BufNewFile *.mkd set ft=mkd
+autocmd! BufRead,BufNewFile *.pdc set ft=pdc
 " MIPS Syntax
-au! BufRead,BufNewFile *.spim set ft=mips
+autocmd! BufRead,BufNewFile *.spim set ft=mips
 " }}}
 
 " Close the preview window automatically
@@ -198,6 +242,9 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 " Enabling Django snippets
 autocmd FileType python set ft=python.django
 autocmd FileType html set ft=html.django_template
+
+" Auto save when focus is lost
+au FocusLost * :wa
 
 " Neocomplcache settings {{{
 let g:neocomplcache_enable_at_startup=1
