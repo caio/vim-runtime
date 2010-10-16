@@ -128,9 +128,7 @@ imap <F8> <C-o>:setlocal spell! spelllang=pt_br<CR>
 
 " {{{ Fuzzy Finder
 nmap <silent><leader>f :FufFile<CR>
-nmap <silent><leader>t :FufTag<CR>
 nmap <silent><leader>d :FufDir<CR>
-imap <silent><leader>b <C-O>:FufBuffer<CR>
 nmap <silent><leader>b :FufBuffer<CR>
 " }}}
 
