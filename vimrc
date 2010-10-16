@@ -285,6 +285,18 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " }}}
 
+" {{{ Testing autocmds
+" Google's JSLint
+au BufNewFile,BufRead *.js set makeprg=gjslint\ %
+au BufNewFile,BufRead *.js set errorformat=%-P-----\ FILE\ \ :\ \ %f\ -----,Line\ %l\\,\ E:%n:\ %m,%-Q,%-GFound\ %s,%-GSome\ %s,%-Gfixjsstyle%s,%-Gscript\ can\ %s,%-G
+" Nose
+au BufNewFile,BufRead test_*.py set makeprg=nosetests\ --machine-out\ --nocapture
+au BufNewFile,BufRead test_*.py set shellpipe=2>&1\ >/dev/null\ \|\ tee
+au BufNewFile,BufRead test_*.py set errorformat=%f:%l:\ %m
+au BufNewFile,BufRead test_*.py nmap <silent> <leader>m <Plug>MakeGreen
+au BufNewFile,BufRead test_*.py nmap <leader>M :make<cr>
+" }}}
+
 " Persistent Undo
 if v:version > 702
     set undofile
