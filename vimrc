@@ -32,6 +32,8 @@ set wildignore+=*.o,*~,.lo,*.pyc
 set suffixes+=.in,.a
 set hidden
 set shiftwidth=4
+set textwidth=79
+set formatoptions=qrn1
 set tabstop=8
 set smarttab
 set expandtab
@@ -244,7 +246,7 @@ autocmd FileType python set ft=python.django
 autocmd FileType html set ft=html.django_template
 
 " Auto save when focus is lost
-au FocusLost * :wa
+autocmd FocusLost * :wa
 
 " Neocomplcache settings {{{
 let g:neocomplcache_enable_at_startup=1
