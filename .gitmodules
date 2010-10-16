@@ -46,3 +46,6 @@
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
 	url = http://github.com/mileszs/ack.vim.git
+[submodule "bundle/makegreen"]
+	path = bundle/makegreen
+	url = http://github.com/reinh/vim-makegreen.git
