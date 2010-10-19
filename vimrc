@@ -246,6 +246,9 @@ autocmd FileType html set ft=html.django_template
 " Auto save when focus is lost
 autocmd FocusLost * :wa
 
+" Augeas files
+autocmd BufNewFile,BufRead *.aug set filetype=augeas
+
 " Neocomplcache settings {{{
 let g:neocomplcache_enable_at_startup=1
 let g:neocomplcache_enable_smart_case=1
