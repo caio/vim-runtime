@@ -73,7 +73,23 @@ if has("gui_running")
     nmap <silent><A--> :call SmallerFont()<CR>
     " Remove GUI
     set guioptions=aAe
-    set guitablabel=%(%m\ %)%f
+    " extracted from script #3286
+    function LiteTabLabel()
+        let label = tabpagenr().':'
+        let bufnrlist = tabpagebuflist(v:lnum)
+
+        " Add '+' if one of the buffers in the tab page is modified
+        for bufnr in bufnrlist
+            if getbufvar(bufnr, "&modified")
+                let label .= '+ '
+                break
+            endif
+        endfor
+
+        " Append the buffer name
+        return label . bufname(bufnrlist[tabpagewinnr(v:lnum) - 1])
+    endfunction
+    set guitablabel=%{LiteTabLabel()}
     " mayansmoke settings
     let g:mayansmoke_special_key_visibility=2
     let g:mayansmoke_cursor_line_visibility=2
