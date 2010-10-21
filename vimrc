@@ -95,6 +95,9 @@ if has("gui_running")
     let g:mayansmoke_cursor_line_visibility=2
 elseif &t_Co >= 256
     colorscheme herald
+elseif $TERM =~ '^screen-bce'
+    set t_Co=256
+    colorscheme vitamins
 else
     colorscheme blackboard
 endif
