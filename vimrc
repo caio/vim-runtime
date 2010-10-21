@@ -60,7 +60,7 @@ set cmdheight=2
 
 " {{{ colors, fonts and gui
 if has("gui_running")
-    colorscheme vitamins
+    colorscheme mustang
     set guifont=Envy\ Code\ R\ 10
     if v:version > 702
         set relativenumber
