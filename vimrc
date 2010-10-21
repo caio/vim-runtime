@@ -318,6 +318,7 @@ au BufNewFile,BufRead test_*.py nmap <leader>M :make<cr>
 if v:version > 702
     set undofile
     set undodir=/tmp,.,~/
+    autocmd BufWritePre /tmp/* setlocal noundofile
 endif
 
 " {{{ statusline
