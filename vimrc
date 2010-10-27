@@ -39,7 +39,6 @@ set smarttab
 set expandtab
 set softtabstop=4
 set autoindent
-set smartindent
 set nonumber
 set viminfo='1000,f1,:1000,/1000
 set history=500
