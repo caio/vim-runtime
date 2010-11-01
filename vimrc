@@ -55,6 +55,7 @@ set completeopt=menu,preview,longest,menuone
 " reducing noise
 set more
 set cmdheight=2
+set tags=tags;/
 " }}}
 
 " {{{ colors, fonts and gui
