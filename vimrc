@@ -326,14 +326,16 @@ endif
 
 " {{{ statusline
 set laststatus=2
-set statusline=%2*
-set statusline+=%f\                          " file name
-set statusline+=%h%m%r%w                     " flags
-set statusline+=\[%{strlen(&ft)?&ft:'-'},    " filetype
-set statusline+=%{&enc},                     " encoding
-set statusline+=%{&ff}]\                     " file format
-set statusline+=0x%B\                        " current char
-set statusline+=%l,%c\ %O,%P                 " line, column, offset
+" set statusline=%2*
+" set statusline+=%f\                          " file name
+" set statusline+=%h%m%r%w                     " flags
+" set statusline+=\[%{strlen(&ft)?&ft:'-'},    " filetype
+" set statusline+=%{&enc},                     " encoding
+" set statusline+=%{&ff}]\                     " file format
+" set statusline+=0x%B\                        " current char
+" set statusline+=%l,%c\ %O,%P                 " line, column, offset
+" From: http://stackoverflow.com/questions/164847/what-is-in-your-vimrc/1219114#1219114
+set statusline=%2*%n\|%<%*%-.40F%2*\|\ %2*%M\ %3*%=%1*\ %1*%2.6l%2*x%1*%1.9(%c%V%)%2*[%1*%P%2*]%1*%2B
 if has('title') && (has('gui_running') || &title)
     set titlestring=
     set titlestring+=%f\                     " file name
