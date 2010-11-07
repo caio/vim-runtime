@@ -114,21 +114,18 @@ imap <silent><C-S-Tab> <C-O>gT
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
-nmap <silent><leader>N :bp<CR>
+inoremap jj <ESC>
+nmap <silent><leader>m :bp<CR>
 nmap <silent><leader>n :bn<CR>
-imap <silent><leader>N <C-o>:bp<CR>
-imap <silent><leader>n <C-o>:bn<CR>
-imap  
-nmap  
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <tab> %
 vnoremap <tab> %
+" Better regex support while searching
 nnoremap / /\v
 vnoremap / /\v
 " Re-select block after (de)indent
 vnoremap < <gv
 vnoremap > >gv
-inoremap jj <ESC>
 " }}}
 
 " {{{ Better navigation when 'wrap' is on
