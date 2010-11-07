@@ -52,3 +52,9 @@
 [submodule "bundle/selfdot"]
 	path = bundle/selfdot
 	url = https://github.com/narfdotpl/selfdot.vim.git
+[submodule "plugin/syntastic"]
+	path = plugin/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
