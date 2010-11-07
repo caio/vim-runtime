@@ -170,7 +170,6 @@ endfunction
 set foldtext=MyFoldText()
 " }}}
 
-
 " List trailing chars
 set list
 set listchars=tab:▸\ ,trail:.,extends:#,nbsp:.
@@ -189,9 +188,6 @@ endfunction
 inoremap <silent><HOME> <C-O>:call <SID>SmartHome()<CR>
 nnoremap <silent><HOME> :call <SID>SmartHome()<CR>
 " }}}
-
-" Supertab
-let g:SuperTabDefaultCompletionType='context'
 
 " Yankring
 imap <leader>p <C-O>:YRShow<CR>
