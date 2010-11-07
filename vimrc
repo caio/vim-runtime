@@ -248,21 +248,16 @@ autocmd! BufRead,BufNewFile *.mkd set ft=mkd
 autocmd! BufRead,BufNewFile *.pdc set ft=pdc
 " MIPS Syntax
 autocmd! BufRead,BufNewFile *.spim set ft=mips
+" Augeas files
+autocmd BufNewFile,BufRead *.aug set filetype=augeas
 " }}}
 
 " Close the preview window automatically
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-" Enabling Django snippets
-autocmd FileType python set ft=python.django
-autocmd FileType html set ft=html.django_template
-
 " Auto save when focus is lost
 autocmd FocusLost * :wa
-
-" Augeas files
-autocmd BufNewFile,BufRead *.aug set filetype=augeas
 
 " Neocomplcache settings {{{
 let g:neocomplcache_enable_at_startup=1
