@@ -229,6 +229,9 @@ let g:session_autoload=0
 let g:session_autosave=1
 set sessionoptions-=help
 
+" renamer plugin
+let g:RenamerSupportColonWToRename=1
+
 " Python synxtax file
 let python_highlight_all=1
 let python_slow_sync=1
