@@ -16,6 +16,8 @@ Other notable plugins are:
 - [number marks][2]
 - [yankring][4]
 - [slime][5]
+- [hexhighlight][7]
+- [renamer][8]
 
 
 Setup
@@ -42,3 +44,5 @@ And finally setup your environment:
 [4]: http://www.vim.org/scripts/script.php?script_id=1234
 [5]: http://technotales.wordpress.com/2007/10/03/like-slime-for-vim/
 [6]: http://github.com/caio/vim-runtime/blob/master/.gitmodules
+[7]: http://www.vim.org/scripts/script.php?script_id=2937
+[8]: http://www.vim.org/scripts/script.php?script_id=1721
