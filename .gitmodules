@@ -49,3 +49,6 @@
 [submodule "bundle/makegreen"]
 	path = bundle/makegreen
 	url = http://github.com/reinh/vim-makegreen.git
+[submodule "bundle/selfdot"]
+	path = bundle/selfdot
+	url = https://github.com/narfdotpl/selfdot.vim.git
