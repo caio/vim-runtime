@@ -136,10 +136,10 @@ nmap <Down> gj
 " }}}
 
 " {{{ spell shortcuts
-nmap <F7> :setlocal spell! spelllang=en<CR>
-imap <F7> <C-o>:setlocal spell! spelllang=en<CR>
-nmap <F8> :setlocal spell! spelllang=pt_br<CR>
-imap <F8> <C-o>:setlocal spell! spelllang=pt_br<CR>
+nmap <leader>se :setlocal spell! spellang=en<CR>
+imap <leader>se <C-o>:setlocal spell! spellang=en<CR>
+nmap <leader>sp :setlocal spell! spellang=pt_br<CR>
+imap <leader>sp <C-o>:setlocal spell! spellang=pt_br<CR>
 " }}}
 
 " {{{ Fuzzy Finder
