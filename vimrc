@@ -136,10 +136,10 @@ nmap <Down> gj
 " }}}
 
 " {{{ spell shortcuts
-nmap <leader>se :setlocal spell! spellang=en<CR>
-imap <leader>se <C-o>:setlocal spell! spellang=en<CR>
-nmap <leader>sp :setlocal spell! spellang=pt_br<CR>
-imap <leader>sp <C-o>:setlocal spell! spellang=pt_br<CR>
+nmap <leader>se :setlocal spell! spelllang=en<CR>
+imap <leader>se <C-o>:setlocal spell! spelllang=en<CR>
+nmap <leader>sp :setlocal spell! spelllang=pt_br<CR>
+imap <leader>sp <C-o>:setlocal spell! spelllang=pt_br<CR>
 " }}}
 
 " {{{ Fuzzy Finder
@@ -233,7 +233,7 @@ set sessionoptions-=help
 let g:RenamerSupportColonWToRename=1
 
 " clang_complete plugin
-let g:clang_complete_auto=1
+let g:clang_complete_auto=0
 
 " Python synxtax file
 let python_highlight_all=1
