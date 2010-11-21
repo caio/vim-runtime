@@ -61,7 +61,7 @@ set tags=tags;/
 " {{{ colors, fonts and gui
 if has("gui_running")
     colorscheme mustang
-    set guifont=Envy\ Code\ R\ 10
+    set guifont=Dejavu\ Sans\ Mono\ 10
     if v:version > 702
         set relativenumber
     else
