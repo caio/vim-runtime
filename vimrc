@@ -350,6 +350,7 @@ set statusline+=%{StatuslineTrailingSpaceWarning()}
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%{StatuslineLongLineWarning()}
 set statusline+=%*
 
 "display a warning if &paste is set
@@ -376,6 +377,7 @@ endfunction
 
 "recalculate the trailing whitespace warning when idle, and after saving
 autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
+autocmd cursorhold,bufwritepost * unlet! b:statusline_long_line_warning
 
 "return '[\s]' if trailing white space is detected
 "return '' otherwise
@@ -421,10 +423,12 @@ function! StatuslineLongLineWarning()
         let long_line_lens = s:LongLines()
 
         if len(long_line_lens) > 0
-            let b:statusline_long_line_warning = "[" .
-                        \ '#' . len(long_line_lens) . "," .
-                        \ 'm' . s:Median(long_line_lens) . "," .
-                        \ '$' . max(long_line_lens) . "]"
+            " let b:statusline_long_line_warning = '[' .
+            "             \ '#' . len(long_line_lens) . ',' .
+            "             \ 'm' . s:Median(long_line_lens) . ',' .
+            "             \ '$' . max(long_line_lens) . ']'
+            let b:statusline_long_line_warning = '[>' .
+                            \ (&tw ? &tw : 80) . ']'
         else
             let b:statusline_long_line_warning = ""
         endif
