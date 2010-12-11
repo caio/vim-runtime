@@ -31,9 +31,6 @@
 [submodule "bundle/vim-cucumber"]
 	path = bundle/vim-cucumber
 	url = http://github.com/tpope/vim-cucumber.git
-[submodule "bundle/mac-classic-theme"]
-	path = bundle/mac-classic-theme
-	url = http://github.com/nelstrom/vim-mac-classic-theme.git
 [submodule "bundle/fuzzyfinder"]
 	path = bundle/fuzzyfinder
 	url = http://github.com/clones/vim-fuzzyfinder.git
