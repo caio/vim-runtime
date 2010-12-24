@@ -469,52 +469,6 @@ function! s:Median(nums)
 endfunction
 " }}}
 
-function! s:ListLongLines()
-    let treshold = (&tw ? &tw : 80)
-    let spaces = repeat(" ", &ts)
-    let longlines = []
-
-    let i = 1
-    while i <= line("$")
-        let len = strlen(substitute(getline(i), '\t', spaces, 'g'))
-        if len > treshold
-            call add(longlines, i)
-        endif
-        let i += 1
-    endwhile
-
-    return longlines
-endfunction
-
-function! s:NextLongLine()
-    if !exists("b:long_lines_list")
-        let b:long_lines_list = s:ListLongLines()
-    endif
-
-    let curline = line('.')
-    let listsize = len(b:long_lines_list)
-
-    let i = 0
-    while i < listsize
-        let nextline = get(b:long_lines_list, i)
-        if nextline > curline
-            return nextline
-        endif
-        let i += 1
-    endwhile
-    " allow wrapping
-    return get(b:long_lines_list, 0, curline)
-endfunction
-
-function! JumpNextLongLine()
-    let nline = s:NextLongLine()
-    execute "normal! " . nline . "gg"
-endfunction
-
-nnoremap <silent><leader>l :call JumpNextLongLine()<CR>
-autocmd cursorhold,bufwritepost * unlet! b:long_lines_list
-
-
 " {{{ titlestring
 if has('title') && (has('gui_running') || &title)
     set titlestring=
