@@ -172,7 +172,7 @@ set foldtext=MyFoldText()
 
 " List trailing chars
 set list
-set listchars=tab:▸\ ,trail:.,extends:#,nbsp:.
+set listchars=tab:▸\ ,trail:·,precedes:…,extends:…,nbsp:‗
 nmap <silent> <leader>s :set nolist!<CR>
 
 " Strip trailing whitespace
@@ -262,7 +262,7 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 " Auto save when focus is lost
 autocmd FocusLost * :wa
 
-" Neocomplcache settings {{{
+" {{{ Neocomplcache settings
 let g:neocomplcache_enable_at_startup=1
 let g:neocomplcache_enable_smart_case=1
 let g:neocomplcache_enable_underbar_completion=1
