@@ -18,6 +18,7 @@ Submodules:
 - [ack.vim][]
 - [clang_complete][]
 - [delimitMate][]
+- [jumpnextlongline][]
 - [neocomplcache][]
 - [nerdtree][]
 - [selfdot.vim][]
@@ -72,6 +73,7 @@ And finally setup your environment:
 [clang_complete]: https://github.com/Rip-Rip/clang_complete
 [delimitMate]: https://github.com/Raimondi/delimitMate
 [hexHighlight]: http://www.vim.org/scripts/script.php?script_id=2937
+[jumpnextlongline]: https://github.com/caio/jumpnextlongline.vim
 [neocomplcache]: https://github.com/Shougo/neocomplcache
 [nerdtree]: https://github.com/scrooloose/nerdtree
 [number marks]: http://www.vim.org/scripts/script.php?script_id=2194

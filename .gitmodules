@@ -58,3 +58,6 @@
 [submodule "bundle/clang_complete"]
 	path = bundle/clang_complete
 	url = http://github.com/Rip-Rip/clang_complete.git
+[submodule "bundle/jumpnextlongline.vim"]
+	path = bundle/jumpnextlongline.vim
+	url = https://github.com/caio/jumpnextlongline.vim.git
