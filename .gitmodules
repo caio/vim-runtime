@@ -61,3 +61,6 @@
 [submodule "bundle/jumpnextlongline.vim"]
 	path = bundle/jumpnextlongline.vim
 	url = https://github.com/caio/jumpnextlongline.vim.git
+[submodule "bundle/golang"]
+	path = bundle/golang
+	url = https://github.com/jnwhiteh/vim-golang.git
