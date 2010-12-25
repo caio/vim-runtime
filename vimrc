@@ -31,6 +31,7 @@ set wildmode=list:longest
 set wildignore+=*.o,*~,.lo,*.pyc
 set suffixes+=.in,.a
 set hidden
+set scrolloff=3
 set shiftwidth=4
 set textwidth=79
 set formatoptions=qrn1
