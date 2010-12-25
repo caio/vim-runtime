@@ -40,9 +40,9 @@ let s:defpat = '^\s*\(@\|class\s.*:\|def\s\)'
 
 " (**) Ignore non-python files
 " Commented out because some python files are not recognized by Vim
-"if &filetype != 'python'
-"    finish
-"endif
+if &filetype != 'python'
+   finish
+endif
 
 setlocal foldmethod=expr
 setlocal foldexpr=GetPythonFold(v:lnum)
@@ -68,7 +68,7 @@ function! PythonFoldText()
   let w = winwidth(0) - &foldcolumn - (&number ? 8 : 0)
   let size = 1 + v:foldend - v:foldstart
   "compute expansion string
-  let spcs = '................'
+  let spcs = '                '
   while strlen(spcs) < w | let spcs = spcs . spcs
   endwhile
   "expand tabs (mail me if you have tabstop>10)
