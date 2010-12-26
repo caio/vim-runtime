@@ -236,6 +236,9 @@ let g:RenamerSupportColonWToRename=1
 " clang_complete plugin
 let g:clang_complete_auto=0
 
+" syntastic plugin
+let g:syntastic_enable_signs=1
+
 " Python synxtax file
 let python_highlight_all=1
 let python_slow_sync=1
