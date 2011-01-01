@@ -262,9 +262,6 @@ autocmd BufNewFile,BufRead *.aug set filetype=augeas
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-" Auto save when focus is lost
-autocmd FocusLost * :wa
-
 " {{{ Neocomplcache settings
 let g:neocomplcache_enable_at_startup=1
 let g:neocomplcache_enable_smart_case=1
