@@ -121,9 +121,6 @@ nmap <silent><leader>n :bn<CR>
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <tab> %
 vnoremap <tab> %
-" Better regex support while searching
-nnoremap / /\v
-vnoremap / /\v
 " Re-select block after (de)indent
 vnoremap < <gv
 vnoremap > >gv
