@@ -57,6 +57,8 @@ set completeopt=menu,preview,longest,menuone
 set more
 set cmdheight=2
 set tags=tags;/
+" reload file if not modified by this editor instance
+set autoread
 " }}}
 
 " {{{ colors, fonts and gui
