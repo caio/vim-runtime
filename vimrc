@@ -57,6 +57,8 @@ set completeopt=menu,preview,longest,menuone
 set more
 set cmdheight=2
 set tags=tags;/
+" reload file if not modified by this editor instance
+set autoread
 " }}}
 
 " {{{ colors, fonts and gui
@@ -121,9 +123,6 @@ nmap <silent><leader>n :bn<CR>
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <tab> %
 vnoremap <tab> %
-" Better regex support while searching
-nnoremap / /\v
-vnoremap / /\v
 " Re-select block after (de)indent
 vnoremap < <gv
 vnoremap > >gv
@@ -262,9 +261,6 @@ autocmd BufNewFile,BufRead *.aug set filetype=augeas
 " Close the preview window automatically
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
-" Auto save when focus is lost
-autocmd FocusLost * :wa
 
 " {{{ Neocomplcache settings
 let g:neocomplcache_enable_at_startup=1
