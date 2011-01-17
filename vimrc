@@ -378,6 +378,7 @@ endfunction
 "recalculate the trailing whitespace warning when idle, and after saving
 autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
 autocmd cursorhold,bufwritepost * unlet! b:statusline_long_line_warning
+autocmd bufwritepost * unlet! b:statusline_tab_warning
 
 "return '[\s]' if trailing white space is detected
 "return '' otherwise
