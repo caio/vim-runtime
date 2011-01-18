@@ -262,6 +262,10 @@ autocmd BufNewFile,BufRead *.aug set filetype=augeas
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
+" indent-guide settings
+let g:indent_guides_start_level=2
+let g:indent_guides_indent_levels=1
+
 " {{{ Neocomplcache settings
 let g:neocomplcache_enable_at_startup=1
 let g:neocomplcache_enable_smart_case=1
