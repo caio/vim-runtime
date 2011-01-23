@@ -64,7 +64,7 @@ set autoread
 " {{{ colors, fonts and gui
 if has("gui_running")
     colorscheme mustang
-    set guifont=Dejavu\ Sans\ Mono\ 9
+    set guifont=Inconsolata\ 10
     if v:version > 702
         set relativenumber
     else
