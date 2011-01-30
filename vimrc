@@ -264,7 +264,7 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " indent-guide settings
 let g:indent_guides_start_level=2
-let g:indent_guides_indent_levels=1
+let g:indent_guides_guide_size=1
 
 " {{{ Neocomplcache settings
 let g:neocomplcache_enable_at_startup=1
