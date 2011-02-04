@@ -24,7 +24,7 @@ git status --porcelain | grep bundle| grep M|cut -d/ -f 2|
 while read BUNDLE; do
     log "Adding updated ${BUNDLE} version"
     run git add bundle/${BUNDLE}
-    run git commit -m "Update ${BUNDLE} plugin"
+    git commit -m "Update ${BUNDLE} plugin"
     updates=$((updates + 1))
 done
 
