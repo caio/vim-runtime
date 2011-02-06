@@ -21,11 +21,11 @@ run git submodule foreach git pull
 
 updates=0
 git status --porcelain | grep bundle| grep M|cut -d/ -f 2|
-while read BUNDLE; do
+grep -v update.sh| while read BUNDLE; do
+    updates=$((updates + 1))
     log "Adding updated ${BUNDLE} version"
     run git add bundle/${BUNDLE}
     git commit -m "Update ${BUNDLE} plugin"
-    updates=$((updates + 1))
 done
 
-[ ${updates} -eq 0 ] && log "Nothing done" || log "${updates} updated plugins"
+[ "${updates}" == "0" ] && log "Nothing done" || log "${updates} updated plugins"
