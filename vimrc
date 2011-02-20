@@ -490,4 +490,9 @@ if (&term =~ "xterm") && (&termencoding == "")
     set termencoding=utf-8
 endif
 
+" Source local (unversioned) configuration file
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
+
 " vim: set ts=4 sw=4 tw=72:
