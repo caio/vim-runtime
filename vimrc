@@ -59,6 +59,7 @@ set cmdheight=2
 set tags=tags;/
 " reload file if not modified by this editor instance
 set autoread
+set fillchars=vert:┃
 " }}}
 
 " {{{ colors, fonts and gui
