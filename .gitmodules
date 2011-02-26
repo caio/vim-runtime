@@ -1,51 +1,51 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
-	url = git://github.com/tpope/vim-surround.git
+	url = https://github.com/tpope/vim-surround.git
 [submodule "bundle/vim-repeat"]
 	path = bundle/vim-repeat
-	url = git://github.com/tpope/vim-repeat.git
+	url = https://github.com/tpope/vim-repeat.git
 [submodule "bundle/vim-speeddating"]
 	path = bundle/vim-speeddating
-	url = git://github.com/tpope/vim-speeddating.git
+	url = https://github.com/tpope/vim-speeddating.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
-	url = git://github.com/tpope/vim-markdown.git
+	url = https://github.com/tpope/vim-markdown.git
 [submodule "bundle/vim-git"]
 	path = bundle/vim-git
-	url = git://github.com/tpope/vim-git.git
+	url = https://github.com/tpope/vim-git.git
 [submodule "bundle/vim-endwise"]
 	path = bundle/vim-endwise
-	url = git://github.com/tpope/vim-endwise.git
+	url = https://github.com/tpope/vim-endwise.git
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
-	url = git://github.com/Raimondi/delimitMate.git
+	url = https://github.com/Raimondi/delimitMate.git
 [submodule "bundle/vim-ruby"]
 	path = bundle/vim-ruby
-	url = http://github.com/vim-ruby/vim-ruby.git
+	url = https://github.com/vim-ruby/vim-ruby.git
 [submodule "bundle/vim-cucumber"]
 	path = bundle/vim-cucumber
-	url = http://github.com/tpope/vim-cucumber.git
+	url = https://github.com/tpope/vim-cucumber.git
 [submodule "bundle/fuzzyfinder"]
 	path = bundle/fuzzyfinder
-	url = http://github.com/clones/vim-fuzzyfinder.git
+	url = https://github.com/clones/vim-fuzzyfinder.git
 [submodule "bundle/tcomment"]
 	path = bundle/tcomment
-	url = http://github.com/tomtom/tcomment_vim.git
+	url = https://github.com/tomtom/tcomment_vim.git
 [submodule "bundle/neocomplcache"]
 	path = bundle/neocomplcache
-	url = http://github.com/Shougo/neocomplcache.git
+	url = https://github.com/Shougo/neocomplcache.git
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
-	url = http://github.com/mileszs/ack.vim.git
+	url = https://github.com/mileszs/ack.vim.git
 [submodule "bundle/makegreen"]
 	path = bundle/makegreen
-	url = http://github.com/reinh/vim-makegreen.git
+	url = https://github.com/reinh/vim-makegreen.git
 [submodule "bundle/selfdot"]
 	path = bundle/selfdot
 	url = https://github.com/narfdotpl/selfdot.vim.git
@@ -57,7 +57,7 @@
 	url = https://github.com/scrooloose/syntastic.git
 [submodule "bundle/clang_complete"]
 	path = bundle/clang_complete
-	url = http://github.com/Rip-Rip/clang_complete.git
+	url = https://github.com/Rip-Rip/clang_complete.git
 [submodule "bundle/jumpnextlongline.vim"]
 	path = bundle/jumpnextlongline.vim
 	url = https://github.com/caio/jumpnextlongline.vim.git
