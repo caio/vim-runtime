@@ -76,3 +76,6 @@
 [submodule "bundle/coffee-script"]
 	path = bundle/coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/histwin.vim"]
+	path = bundle/histwin.vim
+	url = https://github.com/chrisbra/histwin.vim.git
