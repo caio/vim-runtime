@@ -60,6 +60,7 @@ set tags=tags;/
 " reload file if not modified by this editor instance
 set autoread
 set fillchars=vert:┃
+set showbreak=↪
 " }}}
 
 " {{{ colors, fonts and gui
