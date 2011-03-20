@@ -175,7 +175,6 @@ set foldtext=MyFoldText()
 " List trailing chars
 set list
 set listchars=tab:▸\ ,trail:·,precedes:…,extends:…,nbsp:‗
-nmap <silent> <leader>s :set nolist!<CR>
 
 " Strip trailing whitespace
 nmap <silent><leader>ws :%s/\s\+$//g<CR>
@@ -201,14 +200,6 @@ let html_number_lines=1
 let html_use_css=1
 let use_xhtml=1
 
-" {{{ Number Marks
-map <silent> <unique> mm <Plug>Place_sign
-map <silent> <unique> mb <Plug>Goto_next_sign
-map <silent> <unique> mv <Plug>Goto_prev_sign
-map <silent> <unique> mdd <Plug>Remove_all_signs
-map <silent> <unique> m. <Plug>Move_sign
-" }}}
-
 " Matchit plugin
 runtime macros/matchit.vim
 
@@ -217,7 +208,7 @@ runtime ftplugin/man.vim
 nnoremap K :Man <cword><CR>
 
 " Map Ack.vim to a faster keystroke
-nnoremap <leader>a :Ack
+nnoremap <leader>a :LAck 
 
 " Better/Faster window handling
 nnoremap <leader>w <C-w>v<C-w>l
