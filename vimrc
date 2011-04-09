@@ -52,21 +52,22 @@ set noswapfile
 set title
 set noerrorbells
 set novisualbell
-set completeopt=menu,preview,longest,menuone
+"set completeopt=menu,preview,longest,menuone
 " reducing noise
 set more
-set cmdheight=2
+set cmdheight=1
 set tags=tags;/
 " reload file if not modified by this editor instance
 set autoread
 set fillchars=vert:┃
 set showbreak=↪
+set virtualedit+=block
 " }}}
 
 " {{{ colors, fonts and gui
 if has("gui_running")
     colorscheme mustang
-    set guifont=Inconsolata\ 10
+    set guifont=Dejavu\ Sans\ Mono\ 10
     if v:version > 702
         set relativenumber
     else
