@@ -66,7 +66,7 @@ set virtualedit+=block
 
 " {{{ colors, fonts and gui
 if has("gui_running")
-    colorscheme mustang
+    colorscheme zenburn
     set guifont=Dejavu\ Sans\ Mono\ 10
     if v:version > 702
         set relativenumber
