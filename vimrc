@@ -66,6 +66,7 @@ set virtualedit+=block
 
 " {{{ colors, fonts and gui
 if has("gui_running")
+    let g:zenburn_high_Contrast=1
     colorscheme zenburn
     set guifont=Dejavu\ Sans\ Mono\ 10
     if v:version > 702
@@ -222,6 +223,9 @@ nnoremap <C-l> <C-w>l
 let g:session_autoload=0
 let g:session_autosave=1
 set sessionoptions-=help
+
+" Gitv options
+let g:Gitv_WipeAllOnClose=1
 
 " renamer plugin
 let g:RenamerSupportColonWToRename=1
