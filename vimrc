@@ -66,8 +66,8 @@ set virtualedit+=block
 
 " {{{ colors, fonts and gui
 if has("gui_running")
-    let g:zenburn_high_Contrast=1
-    colorscheme zenburn
+    set background=dark
+    colorscheme solarized
     set guifont=Dejavu\ Sans\ Mono\ 10
     if v:version > 702
         set relativenumber
@@ -101,12 +101,15 @@ if has("gui_running")
     let g:mayansmoke_special_key_visibility=2
     let g:mayansmoke_cursor_line_visibility=2
 elseif &t_Co >= 256
-    colorscheme herald
+    set background=dark
+    colorscheme solarized
 elseif $TERM =~ '^screen-bce'
     set t_Co=256
-    colorscheme vitamins
+    set background=dark
+    colorscheme solarized
 else
-    colorscheme blackboard
+    set background=dark
+    colorscheme solarized
 endif
 " }}}
 
