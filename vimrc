@@ -65,15 +65,16 @@ set virtualedit+=block
 " }}}
 
 " {{{ colors, fonts and gui
+let g:solarized_contrast="high"
 if has("gui_running")
     set background=dark
     colorscheme solarized
     set guifont=Dejavu\ Sans\ Mono\ 9
-    if v:version > 702
-        set relativenumber
-    else
-        set number
-    endif
+    " if v:version > 702
+    "     set relativenumber
+    " else
+    "     set number
+    " endif
     set cursorline
     " FontSize plugin
     nmap <silent><A-+> :call LargerFont()<CR>
@@ -342,10 +343,6 @@ if v:version > 702
 endif
 
 " {{{ statusline
-set laststatus=2
-" From: http://stackoverflow.com/questions/164847/what-is-in-your-vimrc/1219114#1219114
-" set statusline=%2*%n\|%<%*%-.40F%2*\|\ %2*%M\ %3*%=%1*\ %1*%2.6l%2*x%1*%1.9(%c%V%)%2*[%1*%P%2*]%1*%2B
-
 " From: http://www.reddit.com/r/vim/comments/e19bu/whats_your_status_line/
 set statusline=%f       "tail of the filename
 
@@ -386,8 +383,8 @@ set statusline+=%*
 
 set statusline+=%=      "left/right separator
 " set statusline+=%{StatuslineCurrentHighlight()}\ \ "current highlight
-set statusline+=%c,     "cursor column
-set statusline+=%l/%L   "cursor line/total lines
+set statusline+=%l,     "cursor line/total lines
+set statusline+=%c     "cursor column
 set statusline+=\ %P    "percent through file
 set laststatus=2        " Always show status line
 
@@ -420,7 +417,7 @@ function! StatuslineTrailingSpaceWarning()
 endfunction
 
 "return '[&et]' if &et is set wrong
-"return '[mixed-indenting]' if spaces and tabs are used to indent
+"return '[mix-inden]' if spaces and tabs are used to indent
 "return an empty string if everything is fine
 function! StatuslineTabWarning()
     if !exists("b:statusline_tab_warning")
@@ -428,7 +425,7 @@ function! StatuslineTabWarning()
         let spaces = search('^ ', 'nw') != 0
 
         if tabs && spaces
-            let b:statusline_tab_warning =  '[mixed-indenting]'
+            let b:statusline_tab_warning =  '[mix-indent]'
         elseif (spaces && !&et) || (tabs && &et)
             let b:statusline_tab_warning = '[&et]'
         else
@@ -440,20 +437,11 @@ endfunction
 
 "return a warning for "long lines" where "long" is either &textwidth or 80 (if
 "no &textwidth is set)
-"
-"return '' if no long lines
-"return '[#x,my,$z] if long lines are found, were x is the number of long
-"lines, y is the median length of the long lines and z is the length of the
-"longest line
 function! StatuslineLongLineWarning()
     if !exists("b:statusline_long_line_warning")
         let long_line_lens = s:LongLines()
 
         if len(long_line_lens) > 0
-            " let b:statusline_long_line_warning = '[' .
-            "             \ '#' . len(long_line_lens) . ',' .
-            "             \ 'm' . s:Median(long_line_lens) . ',' .
-            "             \ '$' . max(long_line_lens) . ']'
             let b:statusline_long_line_warning = '[>' .
                             \ (&tw ? &tw : 80) . ']'
         else
@@ -515,4 +503,4 @@ if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
 
-" vim: set ts=4 sw=4 tw=72:
+" vim: set ts=4 sw=4 tw=79:
