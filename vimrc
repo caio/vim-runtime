@@ -66,6 +66,9 @@ set virtualedit+=block
 
 " {{{ colors, fonts and gui
 let g:solarized_contrast="high"
+let g:solarized_hitrail=1
+let g:solarized_menu=0
+
 if has("gui_running")
     set background=dark
     colorscheme solarized
