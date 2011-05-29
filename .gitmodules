@@ -88,3 +88,6 @@
 [submodule "bundle/vim-session"]
 	path = bundle/vim-session
 	url = https://github.com/xolox/vim-session
+[submodule "bundle/scala-vim-support"]
+	path = bundle/scala-vim-support
+	url = https://github.com/caio/scala-vim-support
