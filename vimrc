@@ -1,21 +1,66 @@
-" Simple VI configuration file
-" Caio Romão <caioromao@gmail.com>
-
-scriptencoding utf-8
-
-syntax on
-
-" setting up pathogen
+set nocompatible
 filetype off
-call pathogen#runtime_append_all_bundles()
-filetype plugin indent on
 
+" Vundle setup {{{
+set runtimepath+=~/.vim/bundle/vundle
+call vundle#rc()
+
+" Handle itself
+Bundle "gmarik/vundle"
+
+" Github plugins
+Bundle "tpope/vim-surround"
+Bundle "tpope/vim-repeat"
+Bundle "tpope/vim-speeddating"
+Bundle "scrooloose/nerdtree"
+Bundle "tpope/vim-fugitive"
+Bundle "tpope/vim-markdown"
+Bundle "tpope/vim-git"
+Bundle "tpope/vim-endwise"
+Bundle "Raimondi/delimitMate"
+Bundle "vim-ruby/vim-ruby"
+Bundle "tpope/vim-cucumber"
+Bundle "clones/vim-fuzzyfinder"
+Bundle "tomtom/tcomment_vim"
+Bundle "Shougo/neocomplcache"
+Bundle "mileszs/ack.vim"
+Bundle "reinh/vim-makegreen"
+Bundle "narfdotpl/selfdot.vim"
+Bundle "scrooloose/syntastic"
+Bundle "scrooloose/syntastic"
+Bundle "Rip-Rip/clang_complete"
+Bundle "caio/jumpnextlongline.vim"
+Bundle "jnwhiteh/vim-golang"
+Bundle "nathanaelkane/vim-indent-guides"
+Bundle "godlygeek/tabular"
+Bundle "hallettj/jslint.vim"
+Bundle "kchmck/vim-coffee-script"
+Bundle "chrisbra/histwin.vim"
+Bundle "gregsexton/gitv"
+Bundle "altercation/vim-colors-solarized"
+Bundle "xolox/vim-session"
+Bundle "caio/scala-vim-support"
+Bundle "framallo/taskwarrior.vim"
+Bundle "yurifury/hexHighlight"
+Bundle "chrismetcalf/vim-yankring"
+
+" Vim-Scripts plugins
+Bundle "javacomplete"
+Bundle "jpythonfold.vim"
+Bundle "L9"
+Bundle "pyflakes"
+" Bundle "ctags_highlighting"
+Bundle "renamer.vim"
+" }}}
+
+filetype plugin indent on
+syntax on
+scriptencoding utf-8
 let mapleader=','
 
 " {{{ basic settings
 set mouse=a
 set nowrap
-set nocompatible
 set shortmess=a
 set showcmd
 set showmatch
