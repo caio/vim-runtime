@@ -48,7 +48,7 @@ Bundle "chrismetcalf/vim-yankring"
 Bundle "javacomplete"
 Bundle "jpythonfold.vim"
 Bundle "L9"
-Bundle "pyflakes"
+Bundle "pyflakes.vim"
 " Bundle "ctags_highlighting"
 Bundle "renamer.vim"
 " }}}
