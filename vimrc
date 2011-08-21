@@ -243,6 +243,7 @@ function! s:SmartHome()
 endfunction
 inoremap <silent><HOME> <C-O>:call <SID>SmartHome()<CR>
 nnoremap <silent><HOME> :call <SID>SmartHome()<CR>
+nnoremap <silent>0 :call <SID>SmartHome()<CR>
 " }}}
 
 " Yankring
