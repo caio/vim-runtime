@@ -62,7 +62,7 @@ let mapleader=','
 " {{{ basic settings
 set mouse=a
 set nowrap
-set shortmess=a
+set shortmess=at
 set showcmd
 set showmatch
 "set matchpairs+=<:>
