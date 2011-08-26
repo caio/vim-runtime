@@ -134,7 +134,7 @@ if has("gui_running")
     " Remove GUI
     set guioptions=aAe
     " extracted from script #3286
-    function LiteTabLabel()
+    function! LiteTabLabel()
         let label = tabpagenr().':'
         let bufnrlist = tabpagebuflist(v:lnum)
 
