@@ -43,6 +43,8 @@ Bundle "caio/scala-vim-support"
 Bundle "framallo/taskwarrior.vim"
 Bundle "yurifury/hexHighlight"
 Bundle "chrismetcalf/vim-yankring"
+Bundle "majutsushi/tagbar"
+Bundle "nelstrom/vim-mac-classic-theme"
 
 " Vim-Scripts plugins
 Bundle "javacomplete"
@@ -291,6 +293,10 @@ let g:clang_complete_auto=0
 
 " syntastic plugin
 let g:syntastic_enable_signs=1
+
+" tagbar plugin
+let g:tagbar_usearrows = 1
+nnoremap <silent><F5> :TagbarToggle<CR>
 
 " Python synxtax file
 let python_highlight_all=1
