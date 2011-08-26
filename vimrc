@@ -52,6 +52,7 @@ Bundle "pyflakes.vim"
 " Bundle "ctags_highlighting"
 Bundle "renamer.vim"
 Bundle "moin.vim"
+Bundle "molokai"
 " }}}
 
 filetype plugin indent on
