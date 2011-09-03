@@ -111,6 +111,7 @@ set autoread
 set fillchars=vert:┃
 set showbreak=↪
 set virtualedit+=block
+set shiftround
 " }}}
 
 " {{{ colors, fonts and gui
