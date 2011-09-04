@@ -115,13 +115,14 @@ set shiftround
 " }}}
 
 " {{{ colors, fonts and gui
+" solarized settings
 let g:solarized_contrast="high"
 let g:solarized_hitrail=1
 let g:solarized_menu=0
 
 if has("gui_running")
     set background=dark
-    colorscheme solarized
+    colorscheme vitamins
     set guifont=Dejavu\ Sans\ Mono\ 9
     " if v:version > 702
     "     set relativenumber
@@ -156,14 +157,14 @@ if has("gui_running")
     let g:mayansmoke_cursor_line_visibility=2
 elseif &t_Co >= 256
     set background=dark
-    colorscheme solarized
+    colorscheme vitamins
 elseif $TERM =~ '^screen-bce'
     set t_Co=256
     set background=dark
-    colorscheme solarized
+    colorscheme vitamins
 else
     set background=dark
-    colorscheme solarized
+    colorscheme vitamins
 endif
 " }}}
 
