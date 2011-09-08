@@ -45,6 +45,7 @@ Bundle "yurifury/hexHighlight"
 Bundle "chrismetcalf/vim-yankring"
 Bundle "majutsushi/tagbar"
 Bundle "nelstrom/vim-mac-classic-theme"
+Bundle "sjl/threesome.vim"
 
 " Vim-Scripts plugins
 Bundle "javacomplete"
@@ -299,6 +300,9 @@ let g:syntastic_enable_signs=1
 " tagbar plugin
 let g:tagbar_usearrows = 1
 nnoremap <silent><F5> :TagbarToggle<CR>
+
+" threesome settings
+let g:threesome_leader = "-"
 
 " Python synxtax file
 let python_highlight_all=1
