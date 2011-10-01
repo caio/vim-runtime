@@ -315,8 +315,8 @@ autocmd BufRead,BufNewFile *.g set syntax=antlr3
 " StringTemplate Syntax
 autocmd BufRead,BufNewFile *.stg set syntax=stringtemplate
 " Markdown Syntax
-autocmd! BufRead,BufNewFile *.md set ft=mkd
-autocmd! BufRead,BufNewFile *.mkd set ft=mkd
+autocmd! BufRead,BufNewFile *.md set ft=markdown
+autocmd! BufRead,BufNewFile *.mkd set ft=markdown
 autocmd! BufRead,BufNewFile *.pdc set ft=pdc
 " MIPS Syntax
 autocmd! BufRead,BufNewFile *.spim set ft=mips
