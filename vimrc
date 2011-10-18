@@ -189,6 +189,9 @@ vnoremap <tab> %
 " Re-select block after (de)indent
 vnoremap < <gv
 vnoremap > >gv
+" Swap ' and `
+nnoremap ' `
+nnoremap ` '
 " }}}
 
 " {{{ Better navigation when 'wrap' is on
