@@ -20,7 +20,6 @@ Bundle "tpope/vim-endwise"
 Bundle "Raimondi/delimitMate"
 Bundle "vim-ruby/vim-ruby"
 Bundle "tpope/vim-cucumber"
-Bundle "clones/vim-fuzzyfinder"
 Bundle "tomtom/tcomment_vim"
 Bundle "Shougo/neocomplcache"
 Bundle "mileszs/ack.vim"
@@ -46,6 +45,7 @@ Bundle "chrismetcalf/vim-yankring"
 Bundle "majutsushi/tagbar"
 Bundle "nelstrom/vim-mac-classic-theme"
 Bundle "sjl/threesome.vim"
+Bundle "kien/ctrlp.vim"
 
 " Vim-Scripts plugins
 Bundle "javacomplete"
@@ -208,10 +208,13 @@ nmap <leader>sp :setlocal spell! spelllang=pt_br<CR>
 imap <leader>sp <C-o>:setlocal spell! spelllang=pt_br<CR>
 " }}}
 
-" {{{ Fuzzy Finder
-nmap <silent><leader>f :FufFile<CR>
-nmap <silent><leader>d :FufDir<CR>
-nmap <silent><leader>b :FufBuffer<CR>
+" {{{ CtrlP
+let g:ctrlp_map = '<leader>'
+let g:ctrlp_split_window = 0
+let g:ctrlp_working_path_mode = 1
+nmap <silent><leader>f :CtrlP<CR>
+nmap <silent><leader>F :CtrlPCurWD<CR>
+nmap <silent><leader>b :CtrlPBuffer<CR>
 " }}}
 
 " {{{ Better folding
