@@ -276,7 +276,7 @@ runtime ftplugin/man.vim
 nnoremap K :Man <cword><CR>
 
 " Map Ack.vim to a faster keystroke
-nnoremap <leader>a :LAck 
+nnoremap <leader>a :LAck
 
 " Better/Faster window handling
 nnoremap <leader>w <C-w>v<C-w>l
