@@ -52,10 +52,10 @@ Bundle "javacomplete"
 Bundle "jpythonfold.vim"
 Bundle "L9"
 Bundle "pyflakes.vim"
-" Bundle "ctags_highlighting"
 Bundle "renamer.vim"
 Bundle "moin.vim"
 Bundle "molokai"
+Bundle "Specky"
 " }}}
 
 filetype plugin indent on
@@ -237,6 +237,14 @@ function! MyFoldText()
     return line . '…' . repeat(" ",fillcharcount) . foldedlinecount . '…' . ' '
 endfunction
 set foldtext=MyFoldText()
+" }}}
+
+" {{{ Specky
+let g:speckyRunRdocKey       = "<C-S>r"
+let g:speckySpecSwitcherKey  = "<C-S>x"
+let g:speckyRunSpecKey       = "<C-S>s"
+let g:speckyWindowType       = 2
+let g:speckyRunSpecCmd       = "rspec -r ~/.vim/bundle/Specky/ruby/specky_formatter.rb -f SpeckyFormatter"
 " }}}
 
 " List trailing chars
