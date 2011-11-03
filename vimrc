@@ -412,6 +412,22 @@ au BufNewFile,BufRead test_*.py nmap <silent> <leader>m <Plug>MakeGreen
 au BufNewFile,BufRead test_*.py nmap <leader>M :make<cr>
 " }}}
 
+" {{{ NFO
+" Common code for encodings
+function! SetFileEncodings(encodings)
+    let b:myfileencodingsbak=&fileencodings
+    let &fileencodings=a:encodings
+endfunction
+function! RestoreFileEncodings()
+    let &fileencodings=b:myfileencodingsbak
+    unlet b:myfileencodingsbak
+endfunction
+
+" .NFO specific
+au BufReadPre *.nfo call SetFileEncodings('cp437')|set ambiwidth=single
+au BufReadPost *.nfo call RestoreFileEncodings()
+" }}}
+
 " Persistent Undo
 if v:version > 702
     set undofile
