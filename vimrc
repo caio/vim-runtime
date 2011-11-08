@@ -401,9 +401,6 @@ let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 " }}}
 
 " {{{ Testing autocmds
-" Google's JSLint
-au BufNewFile,BufRead *.js set makeprg=gjslint\ %
-au BufNewFile,BufRead *.js set errorformat=%-P-----\ FILE\ \ :\ \ %f\ -----,Line\ %l\\,\ E:%n:\ %m,%-Q,%-GFound\ %s,%-GSome\ %s,%-Gfixjsstyle%s,%-Gscript\ can\ %s,%-G
 " Nose
 au BufNewFile,BufRead test_*.py set makeprg=nosetests\ --machine-out\ --nocapture
 au BufNewFile,BufRead test_*.py set shellpipe=2>&1\ >/dev/null\ \|\ tee
