@@ -123,7 +123,7 @@ let g:solarized_menu=0
 
 if has("gui_running")
     set background=dark
-    colorscheme vitamins
+    colorscheme mustang
     set guifont=Inconsolata\ 8
     " if v:version > 702
     "     set relativenumber
