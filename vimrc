@@ -124,12 +124,7 @@ let g:solarized_menu=0
 if has("gui_running")
     set background=dark
     colorscheme mustang
-    set guifont=Inconsolata\ 8
-    " if v:version > 702
-    "     set relativenumber
-    " else
-    "     set number
-    " endif
+    set guifont=Droid\ Sans\ Mono\ 6
     set cursorline
     " FontSize plugin
     nmap <silent><A-+> :call LargerFont()<CR>
