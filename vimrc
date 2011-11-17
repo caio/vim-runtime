@@ -421,7 +421,7 @@ au BufReadPost *.nfo call RestoreFileEncodings()
 " }}}
 
 " Persistent Undo
-if v:version > 702
+if has("persistent_undo")
     set undofile
     set undodir=/tmp,.,~/
     autocmd BufWritePre /tmp/* setlocal noundofile
