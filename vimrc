@@ -262,6 +262,9 @@ set listchars=tab:▸\ ,trail:·,precedes:…,extends:…,nbsp:‗
 " Strip trailing whitespace
 nmap <silent><leader>ws :%s/\s\+$//g<CR>
 
+" Write with sudo using w!!
+cmap w!! w !sudo tee % &>/dev/null
+
 " {{{ IDE-like home key
 function! s:SmartHome()
     let ll = strpart(getline('.'), -1, col('.'))
