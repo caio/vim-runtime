@@ -45,7 +45,7 @@ Bundle "majutsushi/tagbar"
 Bundle "nelstrom/vim-mac-classic-theme"
 Bundle "sjl/threesome.vim"
 Bundle "kien/ctrlp.vim"
-Bundle "jpalardy/vim-slime"
+Bundle "caio/vim-slime"
 
 " Vim-Scripts plugins
 Bundle "javacomplete"
