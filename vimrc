@@ -76,9 +76,6 @@ set ignorecase
 set smartcase
 set gdefault
 set showfulltag
-set wildmenu
-set wildmode=list:longest
-set wildignore+=*.o,*~,.lo,*.pyc
 set suffixes+=.in,.a
 set hidden
 set scrolloff=3
@@ -113,6 +110,20 @@ set fillchars=vert:┃
 set showbreak=↪
 set virtualedit+=block
 set shiftround
+" }}}
+
+" {{{ Wildmenu
+set wildmenu
+set wildmode=list:longest
+set wildignore+=.hg,.git,.svn
+set wildignore+=*.aux,*.out,*.toc
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest
+set wildignore+=*.spl
+set wildignore+=*.sw?
+set wildignore+=*.DS_Store
+set wildignore+=*.luac
+set wildignore+=*.pyc
 " }}}
 
 " {{{ colors, fonts and gui
