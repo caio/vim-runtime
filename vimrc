@@ -192,6 +192,8 @@ nmap <silent><leader>n :bn<CR>
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <tab> %
 vnoremap <tab> %
+nnoremap <Space> za
+vnoremap <Space> za
 " Re-select block after (de)indent
 vnoremap < <gv
 vnoremap > >gv
