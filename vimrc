@@ -42,13 +42,18 @@ Bundle "xolox/vim-session"
 Bundle "yurifury/hexHighlight"
 
 " Vim-Scripts plugins
+Bundle "blackboard.vim"
+Bundle "herald.vim"
 Bundle "javacomplete"
 Bundle "jpythonfold.vim"
 Bundle "L9"
+Bundle "mayansmoke"
 Bundle "molokai"
 Bundle "pyflakes.vim"
 Bundle "renamer.vim"
 Bundle "Specky"
+Bundle "tir_black"
+Bundle "Zenburn"
 " }}}
 
 filetype plugin indent on
@@ -120,14 +125,12 @@ set wildignore+=*.pyc
 " }}}
 
 " {{{ colors, fonts and gui
-" solarized settings
-let g:solarized_contrast="high"
-let g:solarized_hitrail=1
-let g:solarized_menu=0
+" Default color and background
+set background=dark
+colorscheme zenburn
 
 if has("gui_running")
-    set background=dark
-    colorscheme mustang
+    colorscheme tir_black
     set guifont=Droid\ Sans\ Mono\ 6
     set cursorline
     " FontSize plugin
@@ -152,19 +155,12 @@ if has("gui_running")
         return label . bufname(bufnrlist[tabpagewinnr(v:lnum) - 1])
     endfunction
     set guitablabel=%{LiteTabLabel()}
-    " mayansmoke settings
-    let g:mayansmoke_special_key_visibility=2
-    let g:mayansmoke_cursor_line_visibility=2
 elseif &t_Co >= 256
-    set background=dark
-    colorscheme vitamins
+    " Nothing
 elseif $TERM =~ '^screen-bce'
     set t_Co=256
-    set background=dark
-    colorscheme vitamins
 else
-    set background=dark
-    colorscheme vitamins
+    " Nothing
 endif
 " }}}
 
