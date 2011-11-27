@@ -178,7 +178,7 @@ vnoremap <F1> <ESC>
 inoremap jj <ESC>
 nmap <silent><leader>m :bp<CR>
 nmap <silent><leader>n :bn<CR>
-nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <silent><CR> :nohlsearch<CR>
 nnoremap <tab> %
 vnoremap <tab> %
 nnoremap <Space> za
