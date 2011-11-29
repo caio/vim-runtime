@@ -252,6 +252,7 @@ let g:speckyRunSpecCmd       = "rspec -r ~/.vim/bundle/Specky/ruby/specky_format
 " }}}
 
 " {{{ Python mode
+let g:pymode_options_other = 0
 let g:pymode_lint_checker = "pylint"
 let g:pymode_lint_cwindow = 0
 let g:pymode_utils_whitespaces = 0

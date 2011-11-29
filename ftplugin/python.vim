@@ -1,5 +1,7 @@
-" Allows use of `gf` in python files
+setlocal complete+=t
+setlocal formatoptions-=t
 
+" Allows use of `gf` in python files
 python << EOF
 import os
 import sys
