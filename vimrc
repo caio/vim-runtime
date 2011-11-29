@@ -206,9 +206,16 @@ imap <leader>sp <C-o>:setlocal spell! spelllang=pt_br<CR>
 " }}}
 
 " {{{ CtrlP
-let g:ctrlp_map = '<leader>'
+let g:ctrlp_map = '<c-s-p>'
 let g:ctrlp_split_window = 0
 let g:ctrlp_working_path_mode = 1
+let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_match_window_reversed = 1
+let g:ctrlp_use_caching = 1
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_cache_dir = $HOME.'/.ctrlp_cache'
+let g:ctrlp_max_depth = 5
+let g:ctrlp_follow_symlinks = 1
 nmap <silent><leader>f :CtrlP<CR>
 nmap <silent><leader>F :CtrlPCurWD<CR>
 nmap <silent><leader>b :CtrlPBuffer<CR>
