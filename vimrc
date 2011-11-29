@@ -19,6 +19,7 @@ Bundle "gregsexton/gitv"
 Bundle "jnwhiteh/vim-golang"
 Bundle "kchmck/vim-coffee-script"
 Bundle "kien/ctrlp.vim"
+Bundle "klen/python-mode"
 Bundle "majutsushi/tagbar"
 Bundle "mileszs/ack.vim"
 Bundle "narfdotpl/selfdot.vim"
@@ -49,7 +50,6 @@ Bundle "jpythonfold.vim"
 Bundle "L9"
 Bundle "mayansmoke"
 Bundle "molokai"
-Bundle "pyflakes.vim"
 Bundle "renamer.vim"
 Bundle "Specky"
 Bundle "tir_black"
@@ -244,6 +244,14 @@ let g:speckyWindowType       = 2
 let g:speckyRunSpecCmd       = "rspec -r ~/.vim/bundle/Specky/ruby/specky_formatter.rb -f SpeckyFormatter"
 " }}}
 
+" {{{ Python mode
+let g:pymode_lint_checker = "pylint"
+let g:pymode_lint_cwindow = 0
+let g:pymode_utils_whitespaces = 0
+let g:pymode_syntax_print_as_function = 1
+let g:pymode_syntax_slow_sync = 1
+" }}}
+
 " List trailing chars
 set list
 set listchars=tab:▸\ ,trail:·,precedes:…,extends:…,nbsp:‗
@@ -317,11 +325,6 @@ nnoremap <silent><F5> :TagbarToggle<CR>
 
 " threesome settings
 let g:threesome_leader = "-"
-
-" Python synxtax file
-let python_highlight_all=1
-let python_slow_sync=1
-let python_print_as_function=1
 
 " {{{ Non-standard syntaxes
 " ANTLR3 Syntax
