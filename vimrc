@@ -11,7 +11,7 @@ Bundle "gmarik/vundle"
 " Github plugins
 Bundle "caio/jumpnextlongline.vim"
 Bundle "caio/scala-vim-support"
-Bundle "caio/vim-slime"
+Bundle "jpalardy/vim-slime"
 Bundle "chrisbra/histwin.vim"
 Bundle "chrismetcalf/vim-yankring"
 Bundle "godlygeek/tabular"
