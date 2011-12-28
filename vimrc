@@ -41,6 +41,7 @@ Bundle "tpope/vim-surround"
 Bundle "vim-ruby/vim-ruby"
 Bundle "xolox/vim-session"
 Bundle "yurifury/hexHighlight"
+Bundle "ciaranm/inkpot"
 
 " Vim-Scripts plugins
 Bundle "blackboard.vim"
