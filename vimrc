@@ -207,7 +207,7 @@ imap <leader>sp <C-o>:setlocal spell! spelllang=pt_br<CR>
 " }}}
 
 " {{{ CtrlP
-let g:ctrlp_map = '<c-s-p>'
+let g:ctrlp_map = '<C-S-z>'
 let g:ctrlp_split_window = 0
 let g:ctrlp_working_path_mode = 1
 let g:ctrlp_match_window_bottom = 0
