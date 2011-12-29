@@ -261,6 +261,12 @@ let g:pymode_syntax_print_as_function = 1
 let g:pymode_syntax_slow_sync = 1
 " }}}
 
+" {{{ Ruby mode
+let g:ruby_operators = 1
+let g:rubycomplete_classes_in_global = 1
+let g:rubycomplete_rails = 1
+" }}}
+
 " List trailing chars
 set list
 set listchars=tab:▸\ ,trail:·,precedes:…,extends:…,nbsp:‗
