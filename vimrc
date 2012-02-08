@@ -132,7 +132,7 @@ colorscheme zenburn
 
 if has("gui_running")
     colorscheme tir_black
-    set guifont=Droid\ Sans\ Mono\ 6
+    set guifont=Droid\ Sans\ Mono\ 10
     set cursorline
     " FontSize plugin
     nmap <silent><A-+> :call LargerFont()<CR>
