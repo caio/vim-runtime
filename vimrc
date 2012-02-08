@@ -134,7 +134,7 @@ colorscheme zenburn
 
 if has("gui_running")
     colorscheme tir_black
-    set guifont=Droid\ Sans\ Mono\ 10
+    set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
     set cursorline
     " FontSize plugin
     nmap <silent><A-+> :call LargerFont()<CR>
@@ -301,6 +301,9 @@ let g:yankring_history_file='.yankring_history'
 let html_number_lines=1
 let html_use_css=1
 let use_xhtml=1
+
+" Powerline settings
+let g:Powerline_symbols = 'fancy'
 
 " Matchit plugin
 runtime macros/matchit.vim
