@@ -45,7 +45,6 @@ Bundle "ciaranm/inkpot"
 
 " Vim-Scripts plugins
 Bundle "blackboard.vim"
-Bundle "herald.vim"
 Bundle "javacomplete"
 Bundle "jpythonfold.vim"
 Bundle "L9"
