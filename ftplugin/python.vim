@@ -26,5 +26,12 @@ if 'VIRTUAL_ENV' in os.environ:
     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
     execfile(activate_this, dict(__file__=activate_this))
 
+if os.path.isfile('manage.py'):
+    # django project
+    from glob import glob
+    settings_file = glob('*/settings.py')
+    if settings_file:
+        mod = settings_file[0].replace('/', '.').replace('.py', '')
+        os.environ['DJANGO_SETTINGS_MODULE'] = mod
 EOF
 
