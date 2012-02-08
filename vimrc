@@ -259,6 +259,7 @@ let g:pymode_lint_cwindow = 0
 let g:pymode_utils_whitespaces = 0
 let g:pymode_syntax_print_as_function = 1
 let g:pymode_syntax_slow_sync = 1
+let g:pymode_breakpoint_key = '<leader>k'
 " }}}
 
 " {{{ Ruby mode
