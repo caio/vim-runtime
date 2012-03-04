@@ -11,13 +11,14 @@ Bundle "gmarik/vundle"
 " Github plugins
 Bundle "caio/jumpnextlongline.vim"
 Bundle "caio/scala-vim-support"
-Bundle "jpalardy/vim-slime"
 Bundle "chrisbra/histwin.vim"
 Bundle "chrismetcalf/vim-yankring"
+Bundle "ciaranm/inkpot"
 Bundle "godlygeek/tabular"
 Bundle "gregsexton/gitv"
 Bundle "jelera/vim-javascript-syntax"
 Bundle "jnwhiteh/vim-golang"
+Bundle "jpalardy/vim-slime"
 Bundle "kchmck/vim-coffee-script"
 Bundle "kien/ctrlp.vim"
 Bundle "klen/python-mode"
@@ -30,6 +31,8 @@ Bundle "Raimondi/delimitMate"
 Bundle "reinh/vim-makegreen"
 Bundle "scrooloose/syntastic"
 Bundle "Shougo/neocomplcache"
+Bundle "Shougo/neocomplcache-snippets-complete"
+Bundle "sjl/badwolf"
 Bundle "sjl/threesome.vim"
 Bundle "tomtom/tcomment_vim"
 Bundle "tpope/vim-cucumber"
@@ -43,7 +46,6 @@ Bundle "tpope/vim-surround"
 Bundle "vim-ruby/vim-ruby"
 Bundle "xolox/vim-session"
 Bundle "yurifury/hexHighlight"
-Bundle "ciaranm/inkpot"
 
 " Vim-Scripts plugins
 Bundle "blackboard.vim"
@@ -52,6 +54,7 @@ Bundle "jpythonfold.vim"
 Bundle "L9"
 Bundle "mayansmoke"
 Bundle "molokai"
+Bundle "Perldoc.vim"
 Bundle "renamer.vim"
 Bundle "Specky"
 Bundle "tir_black"
@@ -192,6 +195,8 @@ vnoremap > >gv
 " Swap ' and `
 nnoremap ' `
 nnoremap ` '
+" Quick buffer switch
+noremap <leader><leader> <C-^>
 " }}}
 
 " {{{ Better navigation when 'wrap' is on
@@ -290,6 +295,8 @@ endfunction
 inoremap <silent><HOME> <C-O>:call <SID>SmartHome()<CR>
 nnoremap <silent><HOME> :call <SID>SmartHome()<CR>
 nnoremap <silent>0 :call <SID>SmartHome()<CR>
+nnoremap <silent>H :call <SID>SmartHome()<CR>
+nnoremap L $
 " }}}
 
 " Yankring
