@@ -277,6 +277,9 @@ let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
 " }}}
 
+" Slime settings
+let g:slime_target = "tmux"
+
 " List trailing chars
 set list
 set listchars=tab:▸\ ,trail:·,precedes:…,extends:…,nbsp:‗
