@@ -346,9 +346,6 @@ let g:Gitv_OpenHorizontal=1
 " renamer plugin
 let g:RenamerSupportColonWToRename=1
 
-" clang_complete plugin
-let g:clang_complete_auto=0
-
 " syntastic plugin
 let g:syntastic_enable_signs=1
 
