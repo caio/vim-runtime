@@ -42,6 +42,7 @@ Bundle "vim-ruby/vim-ruby"
 Bundle "xolox/vim-session"
 Bundle "yurifury/hexHighlight"
 Bundle "petdance/vim-perl"
+Bundle "kana/vim-smartinput"
 
 " Vim-Scripts plugins
 Bundle "blackboard.vim"
@@ -407,7 +408,6 @@ inoremap <expr><C-l> neocomplcache#complete_common_string()
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
 " }}}
