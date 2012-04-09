@@ -304,11 +304,6 @@ imap <leader>p <C-O>:YRShow<CR>
 nmap <leader>p :YRShow<CR>
 let g:yankring_history_file='.yankring_history'
 
-" TOhtml options
-let html_number_lines=1
-let html_use_css=1
-let use_xhtml=1
-
 " Powerline settings
 let g:Powerline_symbols = 'fancy'
 
@@ -370,10 +365,6 @@ autocmd BufNewFile,BufRead *.aug set filetype=augeas
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-" indent-guide settings
-let g:indent_guides_start_level=2
-let g:indent_guides_guide_size=1
-
 " {{{ Neocomplcache settings
 let g:neocomplcache_enable_at_startup=1
 let g:neocomplcache_enable_smart_case=1
@@ -427,15 +418,6 @@ endif
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
-" }}}
-
-" {{{ Testing autocmds
-" Nose
-au BufNewFile,BufRead test_*.py set makeprg=nosetests\ --machine-out\ --nocapture
-au BufNewFile,BufRead test_*.py set shellpipe=2>&1\ >/dev/null\ \|\ tee
-au BufNewFile,BufRead test_*.py set errorformat=%f:%l:\ %m
-au BufNewFile,BufRead test_*.py nmap <silent> <leader>m <Plug>MakeGreen
-au BufNewFile,BufRead test_*.py nmap <leader>M :make<cr>
 " }}}
 
 " {{{ NFO
