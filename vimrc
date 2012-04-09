@@ -194,6 +194,7 @@ nnoremap ' `
 nnoremap ` '
 " Quick buffer switch
 noremap <leader><leader> <C-^>
+nnoremap <leader>; A;<ESC>
 " }}}
 
 " {{{ Better navigation when 'wrap' is on
