@@ -307,6 +307,7 @@ let g:yankring_history_file='.yankring_history'
 
 " Powerline settings
 let g:Powerline_symbols = 'fancy'
+call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 
 " Matchit plugin
 runtime macros/matchit.vim
