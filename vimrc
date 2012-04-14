@@ -367,6 +367,9 @@ autocmd BufNewFile,BufRead *.aug set filetype=augeas
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
+" Move to last cursor position
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
 " {{{ Neocomplcache settings
 let g:neocomplcache_enable_at_startup=1
 let g:neocomplcache_enable_smart_case=1
