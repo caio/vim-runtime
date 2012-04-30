@@ -219,12 +219,17 @@ let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 1
 let g:ctrlp_use_caching = 1
 let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_switch_buffer = 1
+let g:ctrlp_max_height = 10
+let g:ctrlp_dotfiles = 0
 let g:ctrlp_cache_dir = $HOME.'/.ctrlp_cache'
 let g:ctrlp_max_depth = 5
 let g:ctrlp_follow_symlinks = 1
 nmap <silent><leader>f :CtrlP<CR>
-nmap <silent><leader>F :CtrlPCurWD<CR>
+nmap <silent><leader>F :CtrlPRoot<CR>
 nmap <silent><leader>b :CtrlPBuffer<CR>
+nmap <silent><leader>t :CtrlPTag<CR>
+nmap <silent><leader>d :CtrlPDir<CR>
 " }}}
 
 " {{{ Better folding
