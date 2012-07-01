@@ -72,7 +72,7 @@ Bundle "Zenburn"
 
 " {{{ Essential
 Bundle "caio/jumpnextlongline.vim"
-Bundle "chrismetcalf/vim-yankring"
+Bundle "YankRing.vim"
 Bundle "jpalardy/vim-slime"
 Bundle "kien/ctrlp.vim"
 Bundle "Lokaltog/vim-powerline"
