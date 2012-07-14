@@ -45,12 +45,16 @@ Bundle "petdance/vim-perl"
 " {{{ Git Helpers
 let g:Gitv_WipeAllOnClose=1
 let g:Gitv_OpenHorizontal=1
-let g:threesome_leader = "-"
+let g:splice_prefix = "-"
+let g:splice_initial_scrollbind_grid=1
+let g:splice_initial_scrollbind_loupe=1
+let g:splice_initial_scrollbind_compare=1
+let g:splice_initial_scrollbind_path=1
 
 Bundle "gregsexton/gitv"
 Bundle "tpope/vim-fugitive"
 Bundle "tpope/vim-git"
-Bundle "sjl/threesome.vim"
+Bundle "sjl/splice.vim"
 " }}}
 
 " {{{ Uncategorized
