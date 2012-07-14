@@ -66,6 +66,10 @@ Bundle "Shougo/neocomplcache-clang"
 Bundle "tpope/vim-markdown"
 Bundle "yurifury/hexHighlight"
 Bundle "javacomplete"
+
+let g:qcc_query_command = 'mutt_ldap.pl'
+Bundle "caio/querycommandcomplete.vim"
+au! BufEnter /tmp/mutt* setlocal omnifunc=QueryCommandComplete
 " }}}
 
 " {{{ Colorschemes
