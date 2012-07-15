@@ -70,6 +70,14 @@ Bundle "javacomplete"
 let g:qcc_query_command = 'mutt_ldap.pl'
 Bundle "caio/querycommandcomplete.vim"
 au! BufEnter /tmp/mutt* setlocal omnifunc=QueryCommandComplete
+
+Bundle "tpope/vim-unimpaired"
+" Bubble single lines
+nmap Oa [e
+nmap Ob ]e
+" Bubble multiple lines
+vmap Oa [egv
+vmap Ob ]egv
 " }}}
 
 " {{{ Colorschemes
@@ -248,6 +256,8 @@ nnoremap <leader>; A;<ESC>
 " Re-select block after (de)indent
 vnoremap < <gv
 vnoremap > >gv
+" Select pasted
+nmap gV `[v`]
 
 " Spell shortcuts
 nmap <leader>se :setlocal spell! spelllang=en<CR>
