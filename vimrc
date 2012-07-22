@@ -104,6 +104,7 @@ Bundle "godlygeek/tabular"
 Bundle "kana/vim-smartinput"
 Bundle "renamer.vim"
 Bundle "L9"
+Bundle "coderifous/textobj-word-column.vim"
 " }}}
 
 " {{{ Settings
