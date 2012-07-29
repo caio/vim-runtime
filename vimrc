@@ -82,8 +82,8 @@ vmap Ob ]egv
 
 " {{{ Colorschemes
 Bundle "tir_black"
-Bundle "molokai"
 Bundle "Zenburn"
+Bundle "Lucius"
 " }}}
 
 " {{{ Essential
@@ -189,12 +189,13 @@ set wildignore+=*.pyc
 
 " {{{ Colors, Fonts and GUI
 set background=dark
-colorscheme zenburn
+let g:lucius_style = "dark_dim"
+colorscheme lucius
+set cursorline
 
 if has("gui_running")
     colorscheme tir_black
     set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
-    set cursorline
     " FontSize plugin
     nmap <silent><A-+> :call LargerFont()<CR>
     nmap <silent><A--> :call SmallerFont()<CR>
