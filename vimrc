@@ -148,7 +148,7 @@ set noswapfile
 set title
 set noerrorbells
 set novisualbell
-"set completeopt=menu,preview,longest,menuone
+set completeopt=menu,preview,longest,menuone
 " reducing noise
 set more
 set cmdheight=1
@@ -174,7 +174,7 @@ endif
 
 " {{{ Wildmenu
 set wildmenu
-set wildmode=list:longest
+set wildmode=list
 set wildignore+=.hg,.git,.svn
 set wildignore+=*.aux,*.out,*.toc
 set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg
@@ -402,6 +402,7 @@ endif
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+let g:neocomplcache_omni_patterns.go = '\.\w'
 " }}}
 " }}}
 
