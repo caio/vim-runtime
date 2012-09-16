@@ -189,7 +189,9 @@ set wildignore+=*.pyc
 
 " {{{ Colors, Fonts and GUI
 set background=dark
-let g:lucius_style = "dark_dim"
+let g:lucius_style       = "dark"
+let g:lucius_contrast    = "low"
+let g:lucius_contrast_bg = "normal"
 colorscheme lucius
 set cursorline
 
