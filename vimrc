@@ -172,7 +172,7 @@ endif
 
 " {{{ Wildmenu
 set wildmenu
-set wildmode=list
+set wildmode=list:longest
 set wildignore+=.hg,.git,.svn
 set wildignore+=*.aux,*.out,*.toc
 set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg
