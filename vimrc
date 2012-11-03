@@ -61,7 +61,6 @@ Bundle "caio/scala-vim-support"
 Bundle "jelera/vim-javascript-syntax"
 Bundle "jnwhiteh/vim-golang"
 Bundle "kchmck/vim-coffee-script"
-Bundle "Shougo/neocomplcache-clang"
 Bundle "tpope/vim-markdown"
 Bundle "yurifury/hexHighlight"
 Bundle "javacomplete"
@@ -95,7 +94,7 @@ Bundle "majutsushi/tagbar"
 Bundle "mileszs/ack.vim"
 Bundle "scrooloose/syntastic"
 Bundle "Shougo/neocomplcache"
-Bundle "Shougo/neocomplcache-snippets-complete"
+Bundle 'Shougo/neosnippet'
 Bundle "tomtom/tcomment_vim"
 Bundle "tpope/vim-repeat"
 Bundle "tpope/vim-surround"
@@ -373,11 +372,12 @@ endif
 let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 
 " Use ctrl+k for snippets
-imap <C-k> <Plug>(neocomplcache_snippets_expand)
-smap <C-k> <Plug>(neocomplcache_snippets_expand)
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
 
-inoremap <expr><C-g> neocomplcache#undo_completion()
-inoremap <expr><C-l> neocomplcache#complete_common_string()
+if has('conceal')
+    set conceallevel=2 concealcursor=i
+endif
 
 " <CR>: Close popup and save indent
 " inoremap <expr><CR> neocomplcache#smart_close_popup() . "\<CR>"
