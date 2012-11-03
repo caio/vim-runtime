@@ -39,7 +39,6 @@ Bundle "Specky"
 
 " {{{ Perl Programming
 Bundle "Perldoc.vim"
-Bundle "petdance/vim-perl"
 " }}}
 
 " {{{ Git Helpers
