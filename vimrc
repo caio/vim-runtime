@@ -7,7 +7,7 @@ call vundle#rc()
 Bundle "gmarik/vundle"
 
 " {{{ Python Programming
-let g:pymode_options_other = 0
+let g:pymode_options = 0
 let g:pymode_lint_checker = "pylint"
 let g:pymode_lint_cwindow = 0
 let g:pymode_utils_whitespaces = 0
