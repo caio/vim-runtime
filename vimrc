@@ -64,6 +64,7 @@ Bundle "kchmck/vim-coffee-script"
 Bundle "tpope/vim-markdown"
 Bundle "yurifury/hexHighlight"
 Bundle "javacomplete"
+Bundle "VimClojure"
 
 let g:qcc_query_command = 'mutt_ldap.pl'
 Bundle "caio/querycommandcomplete.vim"
