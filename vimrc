@@ -20,21 +20,12 @@ Bundle "jpythonfold.vim"
 " }}}
 
 " {{{ Ruby Programming
-" Specky
-let g:speckyRunRdocKey       = "<C-S>r"
-let g:speckySpecSwitcherKey  = "<C-S>x"
-let g:speckyRunSpecKey       = "<C-S>s"
-let g:speckyWindowType       = 2
-let g:speckyRunSpecCmd       = "rspec -r ~/.vim/bundle/Specky/ruby/specky_formatter.rb -f SpeckyFormatter"
-
 " Ruby mode
 let g:ruby_operators = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
 
 Bundle "vim-ruby/vim-ruby"
-Bundle "tpope/vim-cucumber"
-Bundle "Specky"
 " }}}
 
 " {{{ Perl Programming
@@ -42,15 +33,12 @@ Bundle "Perldoc.vim"
 " }}}
 
 " {{{ Git Helpers
-let g:Gitv_WipeAllOnClose=1
-let g:Gitv_OpenHorizontal=1
 let g:splice_prefix = "-"
 let g:splice_initial_scrollbind_grid=1
 let g:splice_initial_scrollbind_loupe=1
 let g:splice_initial_scrollbind_compare=1
 let g:splice_initial_scrollbind_path=1
 
-Bundle "gregsexton/gitv"
 Bundle "tpope/vim-fugitive"
 Bundle "tpope/vim-git"
 Bundle "sjl/splice.vim"
@@ -60,7 +48,6 @@ Bundle "sjl/splice.vim"
 Bundle "caio/scala-vim-support"
 Bundle "jelera/vim-javascript-syntax"
 Bundle "jnwhiteh/vim-golang"
-Bundle "kchmck/vim-coffee-script"
 Bundle "tpope/vim-markdown"
 Bundle "yurifury/hexHighlight"
 Bundle "javacomplete"
@@ -103,7 +90,6 @@ Bundle "godlygeek/tabular"
 Bundle "kana/vim-smartinput"
 Bundle "renamer.vim"
 Bundle "L9"
-Bundle "coderifous/textobj-word-column.vim"
 " }}}
 
 " {{{ Settings
@@ -195,7 +181,6 @@ colorscheme lucius
 set cursorline
 
 if has("gui_running")
-    colorscheme tir_black
     set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
     " FontSize plugin
     nmap <silent><A-+> :call LargerFont()<CR>
@@ -254,7 +239,6 @@ nnoremap ` '
 
 " Quick buffer switch
 noremap <leader><leader> <C-^>
-nnoremap <leader>; A;<ESC>
 
 " Re-select block after (de)indent
 vnoremap < <gv
@@ -286,12 +270,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
-" Faster tab navigation
-nmap <silent><C-Tab> gt
-imap <silent><C-Tab> <C-O>gt
-nmap <silent><C-S-Tab> gT
-imap <silent><C-S-Tab> <C-O>gT
 " }}}
 
 " {{{ Better folding
@@ -428,7 +406,7 @@ runtime ftplugin/man.vim
 nnoremap K :Man <cword><CR>
 
 " Map Ack.vim to a faster keystroke
-nnoremap <leader>a :LAck
+nnoremap <leader>a :LAck<Space>
 
 " renamer plugin
 let g:RenamerSupportColonWToRename=1
