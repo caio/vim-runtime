@@ -5,6 +5,7 @@ filetype off
 set runtimepath+=~/.vim/bundle/vundle
 call vundle#rc()
 Bundle "gmarik/vundle"
+let g:vundle_default_git_proto = 'http'
 
 " {{{ Python Programming
 let g:pymode_options = 0
