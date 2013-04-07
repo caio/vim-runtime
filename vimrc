@@ -29,10 +29,6 @@ let g:rubycomplete_rails = 1
 Bundle "vim-ruby/vim-ruby"
 " }}}
 
-" {{{ Perl Programming
-Bundle "Perldoc.vim"
-" }}}
-
 " {{{ Git Helpers
 let g:splice_prefix = "-"
 let g:splice_initial_scrollbind_grid=1
@@ -47,11 +43,8 @@ Bundle "sjl/splice.vim"
 
 " {{{ Uncategorized
 Bundle "caio/scala-vim-support"
-Bundle "jelera/vim-javascript-syntax"
 Bundle "jnwhiteh/vim-golang"
 Bundle "tpope/vim-markdown"
-Bundle "yurifury/hexHighlight"
-Bundle "javacomplete"
 Bundle "VimClojure"
 
 let g:qcc_query_command = 'mutt_ldap.pl'
@@ -76,11 +69,9 @@ Bundle "Lucius"
 " {{{ Essential
 Bundle "caio/jumpnextlongline.vim"
 Bundle "YankRing.vim"
-Bundle "jpalardy/vim-slime"
 Bundle "kien/ctrlp.vim"
 Bundle "Lokaltog/vim-powerline"
 Bundle "majutsushi/tagbar"
-Bundle "mileszs/ack.vim"
 Bundle "scrooloose/syntastic"
 Bundle "tomtom/tcomment_vim"
 Bundle "tpope/vim-repeat"
@@ -88,7 +79,6 @@ Bundle "tpope/vim-surround"
 Bundle "godlygeek/tabular"
 Bundle "kana/vim-smartinput"
 Bundle "renamer.vim"
-Bundle "L9"
 " }}}
 
 " {{{ Staging
@@ -322,7 +312,7 @@ let g:ctrlp_switch_buffer = 1
 let g:ctrlp_max_height = 10
 let g:ctrlp_dotfiles = 0
 let g:ctrlp_cache_dir = $HOME.'/.ctrlp_cache'
-let g:ctrlp_max_depth = 50
+let g:ctrlp_max_depth = 200
 let g:ctrlp_follow_symlinks = 1
 
 let g:ctrlp_custom_ignore = {
@@ -354,9 +344,6 @@ runtime macros/matchit.vim
 " Manpage plugin
 runtime ftplugin/man.vim
 nnoremap K :Man <cword><CR>
-
-" Map Ack.vim to a faster keystroke
-nnoremap <leader>a :LAck<Space>
 
 " renamer plugin
 let g:RenamerSupportColonWToRename=1
