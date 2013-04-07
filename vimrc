@@ -230,8 +230,6 @@ inoremap jj <ESC>
 nmap <silent><leader>m :bp<CR>
 nmap <silent><leader>n :bn<CR>
 nnoremap <silent><CR> :nohlsearch<CR>
-nnoremap <tab> %
-vnoremap <tab> %
 nnoremap <Space> za
 vnoremap <Space> za
 nnoremap ' `
