@@ -91,6 +91,10 @@ Bundle "renamer.vim"
 Bundle "L9"
 " }}}
 
+" {{{ Staging
+Bundle "Valloric/YouCompleteMe"
+" }}}
+
 " {{{ Settings
 filetype plugin indent on
 syntax on
