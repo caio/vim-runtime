@@ -83,7 +83,6 @@ Bundle "majutsushi/tagbar"
 Bundle "mileszs/ack.vim"
 Bundle "scrooloose/syntastic"
 Bundle "Shougo/neocomplcache"
-Bundle 'Shougo/neosnippet'
 Bundle "tomtom/tcomment_vim"
 Bundle "tpope/vim-repeat"
 Bundle "tpope/vim-surround"
@@ -356,10 +355,6 @@ if !exists('g:neocomplcache_keyword_patterns')
     let g:neocomplcache_keyword_patterns = {}
 endif
 let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-
-" Use ctrl+k for snippets
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
 
 if has('conceal')
     set conceallevel=2 concealcursor=i
