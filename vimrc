@@ -45,7 +45,6 @@ Bundle "sjl/splice.vim"
 Bundle "caio/scala-vim-support"
 Bundle "jnwhiteh/vim-golang"
 Bundle "tpope/vim-markdown"
-Bundle "VimClojure"
 
 let g:qcc_query_command = 'mutt_ldap.pl'
 Bundle "caio/querycommandcomplete.vim"
@@ -83,6 +82,13 @@ Bundle "renamer.vim"
 
 " {{{ Staging
 Bundle "Valloric/YouCompleteMe"
+Bundle "kien/rainbow_parentheses.vim"
+
+Bundle "tpope/vim-fireplace"
+Bundle "tpope/vim-classpath"
+Bundle "guns/vim-clojure-static"
+
+let g:clojure_maxlines = 1000
 " }}}
 
 " {{{ Settings
