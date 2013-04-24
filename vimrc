@@ -81,6 +81,8 @@ Bundle "renamer.vim"
 " }}}
 
 " {{{ Staging
+Bundle "chriskempson/base16-vim"
+
 Bundle "Valloric/YouCompleteMe"
 Bundle "kien/rainbow_parentheses.vim"
 
@@ -182,6 +184,7 @@ set cursorline
 
 if has("gui_running")
     set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
+    colorscheme base16-default
     " FontSize plugin
     nmap <silent><A-+> :call LargerFont()<CR>
     nmap <silent><A--> :call SmallerFont()<CR>
