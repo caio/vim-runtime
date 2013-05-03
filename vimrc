@@ -48,7 +48,7 @@ Bundle "tpope/vim-markdown"
 
 let g:qcc_query_command = 'mutt_ldap.pl'
 Bundle "caio/querycommandcomplete.vim"
-au! BufEnter /tmp/mutt* setlocal omnifunc=QueryCommandComplete
+au! BufEnter /tmp/mutt* setlocal omnifunc=QueryCommandComplete formatoptions+=aw ft=mail tw=72
 
 Bundle "tpope/vim-unimpaired"
 " Bubble single lines
