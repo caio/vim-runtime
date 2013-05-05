@@ -359,6 +359,12 @@ let g:RenamerSupportColonWToRename=1
 
 " syntastic plugin
 let g:syntastic_enable_signs=1
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_enable_balloons = 1
+let g:syntastic_mode_map = { 'mode': 'active',
+                            \ 'active_filetypes': [],
+                            \ 'passive_filetypes': ['perl', 'python'] }
 
 " tagbar plugin
 let g:tagbar_usearrows = 1
