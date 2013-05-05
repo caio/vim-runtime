@@ -60,9 +60,8 @@ vmap Ob ]egv
 " }}}
 
 " {{{ Colorschemes
-Bundle "tir_black"
 Bundle "Zenburn"
-Bundle "Lucius"
+Bundle "chriskempson/base16-vim"
 " }}}
 
 " {{{ Essential
@@ -81,8 +80,6 @@ Bundle "renamer.vim"
 " }}}
 
 " {{{ Staging
-Bundle "chriskempson/base16-vim"
-
 Bundle "Valloric/YouCompleteMe"
 Bundle "kien/rainbow_parentheses.vim"
 
@@ -176,10 +173,7 @@ set wildignore+=*.class,*.jar
 
 " {{{ Colors, Fonts and GUI
 set background=dark
-let g:lucius_style       = "dark"
-let g:lucius_contrast    = "low"
-let g:lucius_contrast_bg = "normal"
-colorscheme lucius
+colorscheme base16-tomorrow
 set cursorline
 
 if has("gui_running")
