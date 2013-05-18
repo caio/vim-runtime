@@ -173,6 +173,7 @@ set wildignore+=*.class,*.jar
 
 " {{{ Colors, Fonts and GUI
 set background=dark
+let base16colorspace=256
 colorscheme base16-tomorrow
 set cursorline
 
