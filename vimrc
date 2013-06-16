@@ -75,7 +75,6 @@ Bundle "tomtom/tcomment_vim"
 Bundle "tpope/vim-repeat"
 Bundle "tpope/vim-surround"
 Bundle "godlygeek/tabular"
-Bundle "kana/vim-smartinput"
 Bundle "renamer.vim"
 " }}}
 
