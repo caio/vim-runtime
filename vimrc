@@ -82,6 +82,12 @@ Bundle "renamer.vim"
 Bundle "Valloric/YouCompleteMe"
 Bundle "kien/rainbow_parentheses.vim"
 
+Bundle "SirVer/ultisnips"
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+
 Bundle "tpope/vim-fireplace"
 Bundle "tpope/vim-classpath"
 Bundle "guns/vim-clojure-static"
