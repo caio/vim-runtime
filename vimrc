@@ -172,13 +172,10 @@ set wildignore+=*.class,*.jar
 
 " {{{ Colors, Fonts and GUI
 set background=dark
-let base16colorspace=256
-colorscheme base16-tomorrow
 set cursorline
 
 if has("gui_running")
     set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
-    colorscheme base16-default
     " FontSize plugin
     nmap <silent><A-+> :call LargerFont()<CR>
     nmap <silent><A--> :call SmallerFont()<CR>
@@ -208,6 +205,11 @@ elseif $TERM =~ '^screen-bce'
 else
     " Nothing
 endif
+
+if &t_Co >= 256
+    let base16colorspace=256
+endif
+colorscheme base16-tomorrow
 
 " Titlestring
 if has('title') && (has('gui_running') || &title)
