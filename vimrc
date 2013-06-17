@@ -46,9 +46,9 @@ Bundle "caio/scala-vim-support"
 Bundle "jnwhiteh/vim-golang"
 Bundle "tpope/vim-markdown"
 
-let g:qcc_query_command = 'mutt_ldap.pl'
 Bundle "caio/querycommandcomplete.vim"
-au! BufEnter /tmp/mutt* setlocal omnifunc=QueryCommandComplete formatoptions+=aw ft=mail tw=72
+au BufEnter /tmp/mutt* setlocal omnifunc=QueryCommandComplete formatoptions+=aw ft=mail tw=72
+au BufEnter /tmp/mutt* let b:qcc_query_command="mutt_ldap.pl"
 
 Bundle "tpope/vim-unimpaired"
 " Bubble single lines
