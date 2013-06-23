@@ -212,6 +212,10 @@ else
     " Nothing
 endif
 
+if has('gui_macvim')
+    set guifont=Menlo\ Regular\ for\ Powerline:h12
+endif
+
 if &t_Co >= 256
     let base16colorspace=256
 endif
