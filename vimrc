@@ -76,22 +76,20 @@ Bundle "tpope/vim-repeat"
 Bundle "tpope/vim-surround"
 Bundle "godlygeek/tabular"
 Bundle "renamer.vim"
-" }}}
-
-" {{{ Staging
 Bundle "Valloric/YouCompleteMe"
-Bundle "kien/rainbow_parentheses.vim"
 
 Bundle "SirVer/ultisnips"
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+" }}}
 
-
+" {{{ Staging
+Bundle "kien/rainbow_parentheses.vim"
 Bundle "tpope/vim-fireplace"
 Bundle "tpope/vim-classpath"
-Bundle "guns/vim-clojure-static"
 
+Bundle "guns/vim-clojure-static"
 let g:clojure_maxlines = 1000
 " }}}
 
