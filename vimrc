@@ -91,6 +91,11 @@ Bundle "tpope/vim-classpath"
 
 Bundle "guns/vim-clojure-static"
 let g:clojure_maxlines = 1000
+
+let perl_nofold_packages=1
+let perl_fold=1
+let perl_fold_blocks=1
+Bundle "vim-perl/vim-perl"
 " }}}
 
 " {{{ Settings
