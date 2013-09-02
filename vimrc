@@ -84,6 +84,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " }}}
 
 " {{{ Staging
+Bundle "scrooloose/nerdtree"
 Bundle "kien/rainbow_parentheses.vim"
 Bundle "tpope/vim-fireplace"
 Bundle "tpope/vim-classpath"
