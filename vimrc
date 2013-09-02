@@ -68,7 +68,6 @@ Bundle "chriskempson/base16-vim"
 Bundle "caio/jumpnextlongline.vim"
 Bundle "YankRing.vim"
 Bundle "kien/ctrlp.vim"
-Bundle "Lokaltog/vim-powerline"
 Bundle "majutsushi/tagbar"
 Bundle "scrooloose/syntastic"
 Bundle "tomtom/tcomment_vim"
@@ -346,10 +345,6 @@ let g:slime_target = "tmux"
 imap <leader>p <C-O>:YRShow<CR>
 nmap <leader>p :YRShow<CR>
 let g:yankring_history_file='.yankring_history'
-
-" Powerline settings
-let g:Powerline_symbols = 'fancy'
-call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 
 " Matchit plugin
 runtime macros/matchit.vim
