@@ -8,15 +8,6 @@ Bundle "gmarik/vundle"
 let g:vundle_default_git_proto = 'http'
 
 " {{{ Python Programming
-let g:pymode_options = 0
-let g:pymode_lint_checker = "pylint"
-let g:pymode_lint_cwindow = 0
-let g:pymode_utils_whitespaces = 0
-let g:pymode_syntax_print_as_function = 1
-let g:pymode_syntax_slow_sync = 1
-let g:pymode_breakpoint_key = '<leader>k'
-
-Bundle "klen/python-mode"
 Bundle "jpythonfold.vim"
 " }}}
 
