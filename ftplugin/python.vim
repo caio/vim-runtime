@@ -7,13 +7,7 @@ import os
 import sys
 import vim
 
-sst_path = os.path.expanduser('~/src/work/upp/')
-sst_paths = [
-    os.path.join(sst_path, 'sst/wui'),
-    os.path.join(sst_path, 'sst/overlay/ALL/opt/ibm/sst/lib'),
-    os.path.join(sst_path, 'common/wui'),
-]
-for p in sys.path + sst_paths:
+for p in sys.path:
     # Add each directory in sys.path, if it exists.
     if os.path.isdir(p):
         # Command 'set' needs backslash before each space.
