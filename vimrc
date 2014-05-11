@@ -33,8 +33,6 @@ Bundle "sjl/splice.vim"
 " }}}
 
 " {{{ Uncategorized
-Bundle "caio/scala-vim-support"
-Bundle "jnwhiteh/vim-golang"
 Bundle "tpope/vim-markdown"
 
 Bundle "caio/querycommandcomplete.vim"
@@ -75,8 +73,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " }}}
 
 " {{{ Staging
-Bundle "kien/rainbow_parentheses.vim"
-
 set ttimeoutlen=50
 let g:airline_left_sep=''
 let g:airline_right_sep=''
@@ -90,9 +86,6 @@ let g:airline#extensions#whitespace#show_message = 0
 let g:airline#extensions#virtualenv#enabled = 1
 let g:airline_theme='powerlineish'
 Bundle "bling/vim-airline"
-
-Bundle "guns/vim-clojure-static"
-let g:clojure_maxlines = 1000
 
 let perl_nofold_packages=1
 let perl_fold=1
