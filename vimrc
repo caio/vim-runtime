@@ -365,7 +365,7 @@ let g:syntastic_warning_symbol='⚠'
 let g:syntastic_enable_balloons = 1
 let g:syntastic_mode_map = { 'mode': 'active',
                             \ 'active_filetypes': [],
-                            \ 'passive_filetypes': ['perl', 'python'] }
+                            \ 'passive_filetypes': ['perl', 'python', 'html'] }
 
 " tagbar plugin
 let g:tagbar_usearrows = 1
