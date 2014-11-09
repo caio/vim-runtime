@@ -152,6 +152,9 @@ set laststatus=2
 set list
 set listchars=tab:▸\ ,trail:·,precedes:…,extends:…,nbsp:‗
 
+" Don't reset the column when paging
+set nostartofline
+
 " Persistent Undo
 if has("persistent_undo")
     set undofile
