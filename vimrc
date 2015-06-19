@@ -1,89 +1,70 @@
 set nocompatible
 filetype off
 
-" Vundle setup
-set runtimepath+=~/.vim/bundle/vundle
-call vundle#rc()
-Bundle "gmarik/vundle"
-let g:vundle_default_git_proto = 'http'
+call plug#begin('~/.vim/plugged')
 
-" {{{ Python Programming
-Bundle "jpythonfold.vim"
-" }}}
+Plug 'jpythonfold.vim'
 
-" {{{ Ruby Programming
-" Ruby mode
 let g:ruby_operators = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
 
-Bundle "vim-ruby/vim-ruby"
-" }}}
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 
-" {{{ Clojure
-Bundle "guns/vim-clojure-static"
-Bundle "kien/rainbow_parentheses.vim"
-Bundle "tpope/vim-leiningen"
-Bundle "tpope/vim-projectionist"
-Bundle "tpope/vim-dispatch"
-Bundle "tpope/vim-fireplace"
-Bundle "guns/vim-clojure-highlight"
-" }}}
+Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
+Plug 'kien/rainbow_parentheses.vim', { 'for': 'clojure' }
+Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
+Plug 'tpope/vim-projectionist', { 'for': 'clojure' }
+Plug 'tpope/vim-dispatch', { 'for': 'clojure' }
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 
-" {{{ Git Helpers
 let g:splice_prefix = "-"
 let g:splice_initial_scrollbind_grid=1
 let g:splice_initial_scrollbind_loupe=1
 let g:splice_initial_scrollbind_compare=1
 let g:splice_initial_scrollbind_path=1
 
-Bundle "tpope/vim-fugitive"
-Bundle "tpope/vim-git"
-Bundle "sjl/splice.vim"
-" }}}
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'sjl/splice.vim'
 
-" {{{ Uncategorized
-Bundle "tpope/vim-markdown"
+Plug 'tpope/vim-markdown'
 
-Bundle "caio/querycommandcomplete.vim"
+Plug 'caio/querycommandcomplete.vim'
 au BufEnter /tmp/mutt* setlocal omnifunc=QueryCommandComplete formatoptions+=aw ft=mail tw=72
 au BufEnter /tmp/mutt* let b:qcc_query_command="mutt_ldap.pl"
 
-Bundle "tpope/vim-unimpaired"
+Plug 'tpope/vim-unimpaired'
+
 " Bubble single lines
 nmap Oa [e
 nmap Ob ]e
 " Bubble multiple lines
 vmap Oa [egv
 vmap Ob ]egv
-" }}}
 
-" {{{ Colorschemes
-Bundle "Zenburn"
-Bundle "chriskempson/base16-vim"
-" }}}
+Plug 'Zenburn'
+Plug 'chriskempson/base16-vim'
 
-" {{{ Essential
-Bundle "caio/jumpnextlongline.vim"
-Bundle "YankRing.vim"
-Bundle "kien/ctrlp.vim"
-Bundle "majutsushi/tagbar"
-Bundle "scrooloose/syntastic"
-Bundle "tomtom/tcomment_vim"
-Bundle "tpope/vim-repeat"
-Bundle "tpope/vim-surround"
-Bundle "godlygeek/tabular"
-Bundle "renamer.vim"
-Bundle "Valloric/YouCompleteMe"
+Plug 'caio/jumpnextlongline.vim'
+Plug 'YankRing.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/syntastic'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'godlygeek/tabular'
+Plug 'renamer.vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 
-Bundle "SirVer/ultisnips"
+Plug 'SirVer/ultisnips'
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsSnippetDirectories=["_snippets"]
-" }}}
 
-" {{{ Staging
 set ttimeoutlen=50
 let g:airline_left_sep=''
 let g:airline_right_sep=''
@@ -96,13 +77,15 @@ let g:airline#extensions#whitespace#symbol = 'WS'
 let g:airline#extensions#whitespace#show_message = 0
 let g:airline#extensions#virtualenv#enabled = 1
 let g:airline_theme='powerlineish'
-Bundle "bling/vim-airline"
+Plug 'bling/vim-airline'
 
 let perl_nofold_packages=1
 let perl_fold=1
 let perl_fold_blocks=1
-Bundle "vim-perl/vim-perl"
-" }}}
+Plug 'vim-perl/vim-perl', { 'for': 'perl' }
+
+call plug#end()
+
 
 " {{{ Settings
 filetype plugin indent on
