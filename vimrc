@@ -20,6 +20,16 @@ let g:rubycomplete_rails = 1
 Bundle "vim-ruby/vim-ruby"
 " }}}
 
+" {{{ Clojure
+Bundle "guns/vim-clojure-static"
+Bundle "kien/rainbow_parentheses.vim"
+Bundle "tpope/vim-leiningen"
+Bundle "tpope/vim-projectionist"
+Bundle "tpope/vim-dispatch"
+Bundle "tpope/vim-fireplace"
+Bundle "guns/vim-clojure-highlight"
+" }}}
+
 " {{{ Git Helpers
 let g:splice_prefix = "-"
 let g:splice_initial_scrollbind_grid=1
