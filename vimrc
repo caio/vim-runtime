@@ -84,6 +84,8 @@ let perl_fold=1
 let perl_fold_blocks=1
 Plug 'vim-perl/vim-perl', { 'for': 'perl' }
 
+Plug 'solarnz/thrift.vim'
+
 call plug#end()
 
 
