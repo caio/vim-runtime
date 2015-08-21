@@ -104,7 +104,7 @@ syntax on
 scriptencoding utf-8
 let mapleader=','
 
-set mouse=a
+set mouse-=a
 set nowrap
 set shortmess=at
 set showcmd
