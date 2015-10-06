@@ -79,11 +79,6 @@ let g:airline#extensions#virtualenv#enabled = 1
 let g:airline_theme='powerlineish'
 Plug 'bling/vim-airline'
 
-let perl_nofold_packages=1
-let perl_fold=1
-let perl_fold_blocks=1
-Plug 'vim-perl/vim-perl', { 'for': 'perl' }
-
 Plug 'solarnz/thrift.vim'
 
 Plug 'fatih/vim-go', { 'for': 'go' }
