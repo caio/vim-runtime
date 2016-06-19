@@ -49,7 +49,6 @@ Plug 'chriskempson/base16-vim'
 
 Plug 'caio/jumpnextlongline.vim'
 Plug 'YankRing.vim'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
 Plug 'tomtom/tcomment_vim'
@@ -90,6 +89,18 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 
+" {{{ fzf
+let g:fzf_buffers_jump = 1
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
+
+imap <c-x><c-f> <plug>(fzf-complete-path)
+nmap <silent><leader>f :GFiles<CR>
+nmap <silent><leader>F :GFiles<CR>
+nmap <silent><leader>b :Buffers<CR>
+nmap <silent><leader>t :BTags<CR>
+nmap <silent><leader>T :Tags<CR>
+" }}}
 
 call plug#end()
 
@@ -315,34 +326,6 @@ nnoremap <silent><HOME> :call <SID>SmartHome()<CR>
 nnoremap <silent>0 :call <SID>SmartHome()<CR>
 nnoremap <silent>H :call <SID>SmartHome()<CR>
 nnoremap L $
-" }}}
-
-" {{{ CtrlP Settings
-let g:ctrlp_map = '<C-S-z>'
-let g:ctrlp_split_window = 0
-let g:ctrlp_working_path_mode = 1
-let g:ctrlp_match_window_bottom = 0
-let g:ctrlp_match_window_reversed = 1
-let g:ctrlp_use_caching = 1
-let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_switch_buffer = 1
-let g:ctrlp_max_height = 10
-let g:ctrlp_dotfiles = 0
-let g:ctrlp_cache_dir = $HOME.'/.ctrlp_cache'
-let g:ctrlp_max_depth = 200
-let g:ctrlp_follow_symlinks = 1
-
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](target)$',
-  \ }
-
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-
-nmap <silent><leader>f :CtrlP<CR>
-nmap <silent><leader>F :CtrlPRoot<CR>
-nmap <silent><leader>b :CtrlPBuffer<CR>
-nmap <silent><leader>t :CtrlPTag<CR>
-nmap <silent><leader>d :CtrlPDir<CR>
 " }}}
 
 " Slime settings
