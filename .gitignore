@@ -6,3 +6,4 @@ sessions/
 bundle/*
 !bundle/vundle
 plugged/*
+init.vim
