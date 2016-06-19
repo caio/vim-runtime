@@ -76,8 +76,9 @@ let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#whitespace#symbol = 'WS'
 let g:airline#extensions#whitespace#show_message = 0
 let g:airline#extensions#virtualenv#enabled = 1
-let g:airline_theme='powerlineish'
-Plug 'bling/vim-airline'
+let g:airline_theme='base16'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 Plug 'solarnz/thrift.vim'
 
