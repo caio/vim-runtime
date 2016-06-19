@@ -49,7 +49,7 @@ Plug 'chriskempson/base16-vim'
 
 Plug 'caio/jumpnextlongline.vim'
 Plug 'YankRing.vim'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
 Plug 'tomtom/tcomment_vim'
