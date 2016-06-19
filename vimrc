@@ -90,16 +90,8 @@ let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 
 " {{{ fzf
-let g:fzf_buffers_jump = 1
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
-
-imap <c-x><c-f> <plug>(fzf-complete-path)
-nmap <silent><leader>f :GFiles<CR>
-nmap <silent><leader>F :GFiles<CR>
-nmap <silent><leader>b :Buffers<CR>
-nmap <silent><leader>t :BTags<CR>
-nmap <silent><leader>T :Tags<CR>
 " }}}
 
 call plug#end()
@@ -326,6 +318,24 @@ nnoremap <silent><HOME> :call <SID>SmartHome()<CR>
 nnoremap <silent>0 :call <SID>SmartHome()<CR>
 nnoremap <silent>H :call <SID>SmartHome()<CR>
 nnoremap L $
+" }}}
+
+" {{{ FZF Settings
+let g:fzf_buffers_jump = 1
+function! Fzf_git_relative_cwd()
+    let cwd = expand("%:p:h")
+    let git_dir = substitute(fnamemodify(finddir(".git", cwd.";"), ":p"), ".git/", "", "")
+    let relative_dir = substitute(cwd, substitute(git_dir, "/.git", "", ""), "", "")
+    return relative_dir
+endfunction
+
+nnoremap <silent> <leader>f :exe 'GFiles -- ' . Fzf_git_relative_cwd()<CR>
+imap <c-x><c-f> <plug>(fzf-complete-path)
+" nmap <silent><leader>f :GFiles<CR>
+nmap <silent><leader>F :GFiles<CR>
+nmap <silent><leader>b :Buffers<CR>
+nmap <silent><leader>t :BTags<CR>
+nmap <silent><leader>T :Tags<CR>
 " }}}
 
 " Slime settings
