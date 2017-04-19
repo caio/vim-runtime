@@ -30,6 +30,7 @@ nmap Ob ]e
 vmap Oa [egv
 vmap Ob ]egv
 
+Plug 'fxn/vim-monochrome'
 Plug 'altercation/vim-colors-solarized'
 Plug 'caio/jumpnextlongline.vim'
 Plug 'YankRing.vim'
