@@ -5,20 +5,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'jpythonfold.vim'
 
-let g:ruby_operators = 1
-let g:rubycomplete_classes_in_global = 1
-let g:rubycomplete_rails = 1
-
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-
-Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
-Plug 'kien/rainbow_parentheses.vim', { 'for': 'clojure' }
-Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
-Plug 'tpope/vim-projectionist', { 'for': 'clojure' }
-Plug 'tpope/vim-dispatch', { 'for': 'clojure' }
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
-
 let g:splice_prefix = "-"
 let g:splice_initial_scrollbind_grid=1
 let g:splice_initial_scrollbind_loupe=1
@@ -44,7 +30,6 @@ nmap Ob ]e
 vmap Oa [egv
 vmap Ob ]egv
 
-Plug 'Zenburn'
 Plug 'chriskempson/base16-vim'
 
 Plug 'caio/jumpnextlongline.vim'
@@ -71,8 +56,6 @@ let g:airline#extensions#virtualenv#enabled = 1
 let g:airline_theme='base16'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-Plug 'solarnz/thrift.vim'
 
 Plug 'fatih/vim-go', { 'for': 'go' }
 let g:go_highlight_functions = 1
@@ -150,6 +133,7 @@ set listchars=tab:▸\ ,trail:·,precedes:…,extends:…,nbsp:‗
 
 " Don't reset the column when paging
 set nostartofline
+" }}}
 
 " Persistent Undo
 if has("persistent_undo")
@@ -172,47 +156,10 @@ set wildignore+=*.luac
 set wildignore+=*.pyc
 set wildignore+=*.class,*.jar
 " }}}
-" }}}
 
-" {{{ Colors, Fonts and GUI
+" {{{ Colors
 set background=dark
 set cursorline
-
-if has("gui_running")
-    set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
-    " FontSize plugin
-    nmap <silent><A-+> :call LargerFont()<CR>
-    nmap <silent><A--> :call SmallerFont()<CR>
-    " Remove GUI
-    set guioptions=aAe
-    " extracted from script #3286
-    function! LiteTabLabel()
-        let label = tabpagenr().':'
-        let bufnrlist = tabpagebuflist(v:lnum)
-
-        " Add '+' if one of the buffers in the tab page is modified
-        for bufnr in bufnrlist
-            if getbufvar(bufnr, "&modified")
-                let label .= '+ '
-                break
-            endif
-        endfor
-
-        " Append the buffer name
-        return label . bufname(bufnrlist[tabpagewinnr(v:lnum) - 1])
-    endfunction
-    set guitablabel=%{LiteTabLabel()}
-elseif &t_Co >= 256
-    " Nothing
-elseif $TERM =~ '^screen-bce'
-    set t_Co=256
-else
-    " Nothing
-endif
-
-if has('gui_macvim')
-    set guifont=Menlo\ Regular\ for\ Powerline:h12
-endif
 
 if &t_Co >= 256
     let base16colorspace=256
@@ -306,8 +253,6 @@ function! s:SmartHome()
     else | normal! ^
     endif
 endfunction
-inoremap <silent><HOME> <C-O>:call <SID>SmartHome()<CR>
-nnoremap <silent><HOME> :call <SID>SmartHome()<CR>
 nnoremap <silent>0 :call <SID>SmartHome()<CR>
 nnoremap <silent>H :call <SID>SmartHome()<CR>
 nnoremap L $
@@ -330,9 +275,6 @@ nmap <silent><leader>b :Buffers<CR>
 nmap <silent><leader>t :BTags<CR>
 nmap <silent><leader>T :Tags<CR>
 " }}}
-
-" Slime settings
-let g:slime_target = "tmux"
 
 " Yankring
 imap <leader>p <C-O>:YRShow<CR>
