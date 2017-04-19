@@ -30,8 +30,7 @@ nmap Ob ]e
 vmap Oa [egv
 vmap Ob ]egv
 
-Plug 'chriskempson/base16-vim'
-
+Plug 'altercation/vim-colors-solarized'
 Plug 'caio/jumpnextlongline.vim'
 Plug 'YankRing.vim'
 Plug 'majutsushi/tagbar'
@@ -53,7 +52,7 @@ let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#whitespace#symbol = 'WS'
 let g:airline#extensions#whitespace#show_message = 0
 let g:airline#extensions#virtualenv#enabled = 1
-let g:airline_theme='base16'
+let g:airline_theme='distinguished'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -160,11 +159,8 @@ set wildignore+=*.class,*.jar
 " {{{ Colors
 set background=dark
 set cursorline
-
-if &t_Co >= 256
-    let base16colorspace=256
-endif
-colorscheme base16-tomorrow
+let g:solarized_termcolors=256
+colorscheme solarized
 
 " Titlestring
 if has('title') && (has('gui_running') || &title)
