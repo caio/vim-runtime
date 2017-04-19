@@ -75,7 +75,7 @@ call plug#end()
 
 " {{{ Settings
 filetype plugin indent on
-syntax on
+syntax enable
 scriptencoding utf-8
 let mapleader=','
 
