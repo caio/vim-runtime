@@ -54,6 +54,9 @@ let g:airline#extensions#whitespace#symbol = 'WS'
 let g:airline#extensions#whitespace#show_message = 0
 let g:airline#extensions#virtualenv#enabled = 1
 let g:airline_theme='distinguished'
+if has("win32unix")
+    let g:airline_theme='badcat'
+endif
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -160,8 +163,12 @@ set wildignore+=*.class,*.jar
 " {{{ Colors
 set background=dark
 set cursorline
-let g:solarized_termcolors=256
-colorscheme solarized
+if has("win32unix")
+    colorscheme darkblue
+else
+    let g:solarized_termcolors=256
+    colorscheme solarized
+endif
 
 " Titlestring
 if has('title') && (has('gui_running') || &title)
