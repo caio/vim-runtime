@@ -3,7 +3,7 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'jpythonfold.vim'
+Plug 'vim-scripts/jpythonfold.vim'
 
 let g:splice_prefix = "-"
 let g:splice_initial_scrollbind_grid=1
@@ -31,16 +31,17 @@ vmap Oa [egv
 vmap Ob ]egv
 
 Plug 'fxn/vim-monochrome'
+Plug 'owickstrom/vim-colors-paramount'
 Plug 'altercation/vim-colors-solarized'
 Plug 'caio/jumpnextlongline.vim'
-Plug 'YankRing.vim'
+Plug 'vim-scripts/YankRing.vim'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
-Plug 'renamer.vim'
+Plug 'vim-scripts/renamer.vim'
 
 set ttimeoutlen=50
 let g:airline_left_sep=''
