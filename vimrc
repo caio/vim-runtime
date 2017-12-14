@@ -259,16 +259,8 @@ nnoremap L $
 
 " {{{ FZF Settings
 let g:fzf_buffers_jump = 1
-function! Fzf_git_relative_cwd()
-    let cwd = expand("%:p:h")
-    let git_dir = substitute(fnamemodify(finddir(".git", cwd.";"), ":p"), ".git/", "", "")
-    let relative_dir = substitute(cwd, substitute(git_dir, "/.git", "", ""), "", "")
-    return relative_dir
-endfunction
-
-nnoremap <silent> <leader>f :exe 'GFiles -- ' . Fzf_git_relative_cwd()<CR>
 imap <c-x><c-f> <plug>(fzf-complete-path)
-" nmap <silent><leader>f :GFiles<CR>
+nmap <silent><leader>f :exe 'GFiles -- ' . fnamemodify(expand('%'), ':h')<CR>
 nmap <silent><leader>F :GFiles<CR>
 nmap <silent><leader>b :Buffers<CR>
 nmap <silent><leader>t :BTags<CR>
