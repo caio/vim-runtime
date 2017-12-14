@@ -5,16 +5,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'vim-scripts/jpythonfold.vim'
 
-let g:splice_prefix = "-"
-let g:splice_initial_scrollbind_grid=1
-let g:splice_initial_scrollbind_loupe=1
-let g:splice_initial_scrollbind_compare=1
-let g:splice_initial_scrollbind_path=1
-
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
-Plug 'sjl/splice.vim'
-
 Plug 'tpope/vim-markdown'
 
 Plug 'caio/querycommandcomplete.vim'
@@ -68,6 +60,8 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
+
+Plug 'elixir-lang/vim-elixir'
 
 " {{{ fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
