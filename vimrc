@@ -211,6 +211,10 @@ nmap <Down> gj
 
 " Write with sudo using w!!
 cmap w!! w !sudo tee % &>/dev/null
+" fish is not posix
+if $SHELL =~ 'bin/fish'
+    set shell=/usr/bin/bash
+endif
 
 " Strip trailing whitespace
 nmap <silent><leader>ws :%s/\s\+$//g<CR>
