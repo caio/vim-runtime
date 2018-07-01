@@ -28,12 +28,21 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'caio/jumpnextlongline.vim'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'majutsushi/tagbar'
-Plug 'scrooloose/syntastic'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 Plug 'vim-scripts/renamer.vim'
+
+if has("job")
+    Plug 'w0rp/ale'
+
+    let g:ale_sign_error = 'E'
+    let g:ale_sign_warning = 'W'
+
+    nnoremap gd :ALEGoToDefinition<cr>
+    nnoremap K :ALEHover<cr>
+endif
 
 set ttimeoutlen=50
 let g:airline_left_sep=''
@@ -42,6 +51,7 @@ let g:airline_detect_modified=1
 let g:airline_detect_paste=1
 let g:airline_inactive_collapse=1
 let g:airline_powerline_fonts=0
+let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#whitespace#symbol = 'WS'
 let g:airline#extensions#whitespace#show_message = 0
@@ -285,15 +295,6 @@ nnoremap K :Man <cword><CR>
 
 " renamer plugin
 let g:RenamerSupportColonWToRename=1
-
-" syntastic plugin
-let g:syntastic_enable_signs=1
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_enable_balloons = 1
-let g:syntastic_mode_map = { 'mode': 'active',
-                            \ 'active_filetypes': [],
-                            \ 'passive_filetypes': ['perl', 'python', 'html'] }
 
 " tagbar plugin
 let g:tagbar_usearrows = 1
