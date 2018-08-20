@@ -280,6 +280,11 @@ nmap <silent><leader>t :BTags<CR>
 nmap <silent><leader>T :Tags<CR>
 " }}}
 
+let g:netrw_sizestyle="h"
+let g:netrw_banner=0
+let g:netrw_list_style=3
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+
 " Yankring
 imap <leader>p <C-O>:YRShow<CR>
 nmap <leader>p :YRShow<CR>
