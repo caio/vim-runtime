@@ -32,7 +32,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
-Plug 'vim-scripts/renamer.vim'
+Plug 'qpkorr/vim-renamer'
 
 if has("job")
     Plug 'w0rp/ale'
