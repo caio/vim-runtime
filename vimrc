@@ -299,6 +299,7 @@ nnoremap K :Man <cword><CR>
 
 " renamer plugin
 let g:RenamerSupportColonWToRename=1
+let g:RenamerWildIgnoreSetting=''
 
 " tagbar plugin
 let g:tagbar_usearrows = 1
