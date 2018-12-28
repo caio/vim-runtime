@@ -22,9 +22,8 @@ nmap Ob ]e
 vmap Oa [egv
 vmap Ob ]egv
 
-Plug 'fxn/vim-monochrome'
-Plug 'owickstrom/vim-colors-paramount'
-Plug 'altercation/vim-colors-solarized'
+Plug 'Yggdroot/indentLine'
+Plug 'romainl/Apprentice'
 Plug 'caio/jumpnextlongline.vim'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'majutsushi/tagbar'
@@ -169,9 +168,7 @@ set cursorline
 if has("win32unix")
     colorscheme darkblue
 else
-    let g:solarized_termcolors=256
-    set background=light
-    colorscheme solarized
+    colorscheme apprentice
 endif
 
 " Titlestring
