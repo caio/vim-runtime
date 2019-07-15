@@ -34,13 +34,18 @@ Plug 'godlygeek/tabular'
 Plug 'qpkorr/vim-renamer'
 
 if has("job")
-    Plug 'w0rp/ale'
-
     let g:ale_sign_error = 'E'
     let g:ale_sign_warning = 'W'
 
-    nnoremap gd :ALEGoToDefinition<cr>
-    nnoremap K :ALEHover<cr>
+    Plug 'w0rp/ale'
+
+    set omnifunc=ale#completion#OmniFunc
+    nmap gd :ALEGoToDefinition<cr>
+    nmap fr :ALEFindReferences<cr>
+    nmap K :ALEHover<cr>
+
+    nmap <silent> <C-e> <Plug>(ale_next_wrap)
+    nmap <silent> <C-S-e> <Plug>(ale_previous_wrap)
 endif
 
 set ttimeoutlen=50
@@ -74,6 +79,8 @@ let g:go_fmt_command = "goimports"
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 " }}}
+
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
