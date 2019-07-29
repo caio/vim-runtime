@@ -1,37 +1,18 @@
 set nocompatible
 filetype off
 
+" {{{ Plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'vim-scripts/jpythonfold.vim'
-
+Plug 'romainl/Apprentice'
+Plug 'rust-lang/rust.vim'
+Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-markdown'
-
-Plug 'caio/querycommandcomplete.vim'
-au BufEnter /tmp/mutt* setlocal omnifunc=QueryCommandComplete formatoptions+=aw ft=mail tw=72
-au BufEnter /tmp/mutt* let b:qcc_query_command="mutt_ldap.pl"
-
-Plug 'tpope/vim-unimpaired'
-
-" Bubble single lines
-nmap Oa [e
-nmap Ob ]e
-" Bubble multiple lines
-vmap Oa [egv
-vmap Ob ]egv
-
-Plug 'Yggdroot/indentLine'
-Plug 'romainl/Apprentice'
-Plug 'caio/jumpnextlongline.vim'
-Plug 'vim-scripts/YankRing.vim'
-Plug 'majutsushi/tagbar'
-Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'godlygeek/tabular'
-Plug 'qpkorr/vim-renamer'
+Plug 'Yggdroot/indentLine'
 
 if has("job")
     let g:ale_sign_error = 'E'
@@ -75,15 +56,29 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 
-" {{{ fzf
+
+let g:fzf_buffers_jump = 1
+imap <c-x><c-f> <plug>(fzf-complete-path)
+nmap <silent><leader>f :exe 'GFiles -- ' . fnamemodify(expand('%'), ':h')<CR>
+nmap <silent><leader>F :GFiles<CR>
+nmap <silent><leader>b :Buffers<CR>
+nmap <silent><leader>t :BTags<CR>
+nmap <silent><leader>T :Tags<CR>
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
-" }}}
 
-Plug 'rust-lang/rust.vim'
+
+Plug 'vim-scripts/YankRing.vim'
+imap <leader>p <C-O>:YRShow<CR>
+nmap <leader>p :YRShow<CR>
+let g:yankring_history_file='.yankring_history'
+
+let g:RenamerSupportColonWToRename=1
+let g:RenamerWildIgnoreSetting=''
+Plug 'qpkorr/vim-renamer'
 
 call plug#end()
-
+" }}}
 
 " {{{ Settings
 filetype plugin indent on
@@ -147,7 +142,6 @@ set listchars=tab:▸\ ,trail:·,precedes:…,extends:…,nbsp:‗
 set nostartofline
 " }}}
 
-" Persistent Undo
 if has("persistent_undo")
     set undofile
     set undodir=/tmp,.,~/
@@ -169,7 +163,7 @@ set wildignore+=*.pyc
 set wildignore+=*.class,*.jar
 " }}}
 
-" {{{ Colors
+" {{{ Appearance
 set background=dark
 set cursorline
 if has("win32unix")
@@ -201,14 +195,9 @@ vnoremap <Space> za
 nnoremap ' `
 nnoremap ` '
 
-" Quick buffer switch
-noremap <leader><leader> <C-^>
-
 " Re-select block after (de)indent
 vnoremap < <gv
 vnoremap > >gv
-" Select pasted
-nmap gV `[v`]
 
 " Spell shortcuts
 nmap <leader>se :setlocal spell! spelllang=en<CR>
@@ -224,6 +213,7 @@ nmap <Down> gj
 
 " Write with sudo using w!!
 cmap w!! w !sudo tee % &>/dev/null
+
 " fish is not posix
 if $SHELL =~ 'bin/fish'
     set shell=/usr/bin/bash
@@ -274,40 +264,13 @@ nnoremap <silent>H :call <SID>SmartHome()<CR>
 nnoremap L $
 " }}}
 
-" {{{ FZF Settings
-let g:fzf_buffers_jump = 1
-imap <c-x><c-f> <plug>(fzf-complete-path)
-nmap <silent><leader>f :exe 'GFiles -- ' . fnamemodify(expand('%'), ':h')<CR>
-nmap <silent><leader>F :GFiles<CR>
-nmap <silent><leader>b :Buffers<CR>
-nmap <silent><leader>t :BTags<CR>
-nmap <silent><leader>T :Tags<CR>
-" }}}
-
 let g:netrw_sizestyle="h"
 let g:netrw_banner=0
 let g:netrw_list_style=3
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
-" Yankring
-imap <leader>p <C-O>:YRShow<CR>
-nmap <leader>p :YRShow<CR>
-let g:yankring_history_file='.yankring_history'
-
 " Matchit plugin
 runtime macros/matchit.vim
-
-" Manpage plugin
-runtime ftplugin/man.vim
-nnoremap K :Man <cword><CR>
-
-" renamer plugin
-let g:RenamerSupportColonWToRename=1
-let g:RenamerWildIgnoreSetting=''
-
-" tagbar plugin
-let g:tagbar_usearrows = 1
-nnoremap <silent><F5> :TagbarToggle<CR>
 
 " {{{ Non-standard syntaxes
 autocmd! BufRead,BufNewFile *.md set ft=markdown
