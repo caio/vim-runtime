@@ -6,7 +6,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'romainl/Apprentice'
 Plug 'rust-lang/rust.vim'
-Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-markdown'
