@@ -1,10 +1,11 @@
 set nocompatible
 filetype off
+let mapleader=','
 
 " {{{ Plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'romainl/Apprentice'
+Plug 'arcticicestudio/nord-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -41,7 +42,7 @@ let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#whitespace#symbol = 'WS'
 let g:airline#extensions#whitespace#show_message = 0
 let g:airline#extensions#virtualenv#enabled = 1
-let g:airline_theme='distinguished'
+let g:airline_theme='nord'
 if has("win32unix")
     let g:airline_theme='badcat'
 endif
@@ -84,7 +85,6 @@ call plug#end()
 filetype plugin indent on
 syntax enable
 scriptencoding utf-8
-let mapleader=','
 
 set mouse-=a
 set nowrap
@@ -169,7 +169,7 @@ set cursorline
 if has("win32unix")
     colorscheme darkblue
 else
-    colorscheme apprentice
+    colorscheme nord
 endif
 
 " Titlestring
