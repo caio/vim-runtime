@@ -78,6 +78,11 @@ let g:RenamerSupportColonWToRename=1
 let g:RenamerWildIgnoreSetting=''
 Plug 'qpkorr/vim-renamer'
 
+" Zen mode
+Plug 'junegunn/goyo.vim'
+let g:goyo_width = "55%"
+nmap <silent><leader>z :Goyo<CR>
+
 call plug#end()
 " }}}
 
