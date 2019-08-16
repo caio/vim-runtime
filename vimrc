@@ -15,19 +15,9 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
 
-if has("job")
-    let g:ale_sign_error = 'E'
-    let g:ale_sign_warning = 'W'
-
-    Plug 'w0rp/ale'
-
-    set omnifunc=ale#completion#OmniFunc
-    nmap gd :ALEGoToDefinition<cr>
-    nmap fr :ALEFindReferences<cr>
-    nmap K :ALEHover<cr>
-
-    nmap <silent> <C-e> <Plug>(ale_next_wrap)
-    nmap <silent> <C-S-e> <Plug>(ale_previous_wrap)
+if executable("node")
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 
 set ttimeoutlen=50
@@ -37,7 +27,6 @@ let g:airline_detect_modified=1
 let g:airline_detect_paste=1
 let g:airline_inactive_collapse=1
 let g:airline_powerline_fonts=0
-let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#whitespace#symbol = 'WS'
 let g:airline#extensions#whitespace#show_message = 0
