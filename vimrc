@@ -18,6 +18,20 @@ Plug 'Yggdroot/indentLine'
 if executable("node")
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+    " Use tab to trigger completion with characters ahead and navigate.
+    inoremap <silent><expr> <TAB>
+        \ pumvisible() ? "\<C-n>" :
+        \ <SID>check_back_space() ? "\<TAB>" :
+        \ coc#refresh()
+    inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+    function! s:check_back_space() abort
+        let col = col('.') - 1
+        return !col || getline('.')[col - 1]  =~# '\s'
+    endfunction
+
+    nmap <leader>rn <Plug>(coc-rename)
 endif
 
 set ttimeoutlen=50
