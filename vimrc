@@ -30,7 +30,7 @@ let g:airline_powerline_fonts=0
 let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#whitespace#symbol = 'WS'
 let g:airline#extensions#whitespace#show_message = 0
-let g:airline#extensions#virtualenv#enabled = 1
+let g:airline#extensions#branch#enabled = 0
 let g:airline_theme='nord'
 if has("win32unix")
     let g:airline_theme='badcat'
