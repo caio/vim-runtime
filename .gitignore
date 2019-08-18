@@ -7,3 +7,4 @@ bundle/*
 !bundle/vundle
 plugged/*
 init.vim
+view/
