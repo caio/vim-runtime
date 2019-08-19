@@ -16,11 +16,42 @@ Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
 Plug 'cohama/lexima.vim'
 
+Plug 'dense-analysis/ale'
+
+let g:ale_sign_error = 'E'
+let g:ale_sign_warning = 'W'
+let g:ale_set_highlights = 1
+
+nmap <silent> [c <Plug>(ale_previous_wrap)
+nmap <silent> ]c <Plug>(ale_next_wrap)
+
 if executable("node")
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
     inoremap <silent><expr><TAB> pumvisible() ? "\<C-y>" : "<TAB>"
 
+    " Remap keys for gotos
+    nmap <silent> gd <Plug>(coc-definition)
+    nmap <silent> gy <Plug>(coc-type-definition)
+    nmap <silent> gi <Plug>(coc-implementation)
+    nmap <silent> gr <Plug>(coc-references)
+
+    " Use K to show documentation in preview window
+    nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+    function! s:show_documentation()
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    else
+        call CocAction('doHover')
+    endif
+    endfunction
+
+    " Highlight symbol under cursor on CursorHold
+    autocmd CursorHold * silent call CocActionAsync('highlight')
+
     nmap <leader>rn <Plug>(coc-rename)
+    nnoremap <silent><leader>d :<C-u>CocList diagnostics<cr>
 endif
 
 set ttimeoutlen=50
@@ -74,17 +105,6 @@ Plug 'qpkorr/vim-renamer'
 Plug 'junegunn/goyo.vim'
 let g:goyo_width = "55%"
 nmap <silent><leader>z :Goyo<CR>
-
-Plug 'vim-syntastic/syntastic'
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = {
-    \ "mode": "passive",
-    \ "active_filetypes": [],
-    \ "passive_filetypes": [] }
-nmap <silent><leader>c :SyntasticToggleMode<CR>
 
 call plug#end()
 " }}}
