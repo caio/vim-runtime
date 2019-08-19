@@ -1,1 +1,1 @@
-setlocal conceallevel=0
+let b:indentLine_enabled = 0
