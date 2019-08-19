@@ -14,6 +14,7 @@ Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
+Plug 'cohama/lexima.vim'
 
 if executable("node")
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
