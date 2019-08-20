@@ -93,8 +93,8 @@ Plug 'junegunn/fzf.vim'
 
 
 Plug 'vim-scripts/YankRing.vim'
-imap <leader>p <C-O>:YRShow<CR>
-nmap <leader>p :YRShow<CR>
+imap <leader>P <C-O>:YRShow<CR>
+nmap <leader>P :YRShow<CR>
 let g:yankring_history_file='.yankring_history'
 
 let g:RenamerSupportColonWToRename=1
