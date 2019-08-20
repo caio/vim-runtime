@@ -24,6 +24,8 @@ let g:ale_set_highlights = 1
 
 nmap <silent> [c <Plug>(ale_previous_wrap)
 nmap <silent> ]c <Plug>(ale_next_wrap)
+nmap <silent> [C <Plug>(ale_previous_wrap_error)
+nmap <silent> ]C <Plug>(ale_next_wrap_error)
 
 if executable("node")
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -48,6 +50,7 @@ if executable("node")
     endfunction
 
     " Highlight symbol under cursor on CursorHold
+    set updatetime=300
     autocmd CursorHold * silent call CocActionAsync('highlight')
 
     nmap <leader>rn <Plug>(coc-rename)
