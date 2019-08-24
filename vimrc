@@ -28,6 +28,7 @@ nmap <silent> [C <Plug>(ale_previous_wrap_error)
 nmap <silent> ]C <Plug>(ale_next_wrap_error)
 
 if executable("node")
+    let g:coc_start_at_startup = 0
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
     inoremap <silent><expr><TAB> pumvisible() ? "\<C-y>" : "<TAB>"
