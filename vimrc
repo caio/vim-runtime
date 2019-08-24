@@ -16,11 +16,11 @@ Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
 Plug 'cohama/lexima.vim'
 
-Plug 'dense-analysis/ale'
-
 let g:ale_sign_error = 'E'
 let g:ale_sign_warning = 'W'
 let g:ale_set_highlights = 1
+let g:ale_lint_on_enter = 0
+Plug 'dense-analysis/ale'
 
 nmap <silent> [c <Plug>(ale_previous_wrap)
 nmap <silent> ]c <Plug>(ale_next_wrap)
