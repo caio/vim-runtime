@@ -304,11 +304,6 @@ let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 " Matchit plugin
 runtime macros/matchit.vim
 
-" {{{ Non-standard syntaxes
-autocmd! BufRead,BufNewFile *.md set ft=markdown
-autocmd! BufRead,BufNewFile *.mkd set ft=markdown
-" }}}
-
 " Close the preview window automatically
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
