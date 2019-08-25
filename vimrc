@@ -142,7 +142,7 @@ set expandtab
 set softtabstop=4
 set autoindent
 set nonumber
-set viminfo='1000,f1,:1000,/1000
+set viminfo='1000,f1,<500,:1000,/1000,h
 set history=500
 set backspace=indent,eol,start
 set backup
