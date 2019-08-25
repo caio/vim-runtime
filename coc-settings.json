@@ -1,5 +1,6 @@
 {
     "diagnostic.displayByAle": true,
+    "coc.preferences.snippets.enable": false,
     "rust.cfg_test": true,
     "rust.clippy_preference": "on"
 }
