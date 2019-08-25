@@ -195,24 +195,10 @@ set wildignore+=*.pyc
 set wildignore+=*.class,*.jar
 " }}}
 
-" {{{ Appearance
+" Appearance
 set background=dark
 set cursorline
-if has("win32unix")
-    colorscheme darkblue
-else
-    colorscheme nord
-endif
-
-" Titlestring
-if has('title') && (has('gui_running') || &title)
-    set titlestring=
-    set titlestring+=%f\                     " file name
-    set titlestring+=%h%m%r%w                " flags
-    " working directory
-    set titlestring+=\ -\ %{substitute(getcwd(),\ $HOME,\ '~',\ '')}
-endif
-" }}}
+colorscheme nord
 
 " {{{ Mappings
 inoremap <F1> <ESC>
@@ -233,9 +219,7 @@ vnoremap > >gv
 
 " Spell shortcuts
 nmap <leader>se :setlocal spell! spelllang=en<CR>
-imap <leader>se <C-o>:setlocal spell! spelllang=en<CR>
 nmap <leader>sp :setlocal spell! spelllang=pt_br<CR>
-imap <leader>sp <C-o>:setlocal spell! spelllang=pt_br<CR>
 
 " Better navigation when 'wrap' is on
 nmap k gk
@@ -251,11 +235,7 @@ if $SHELL =~ 'bin/fish'
     set shell=/usr/bin/bash
 endif
 
-" Strip trailing whitespace
-nmap <silent><leader>ws :%s/\s\+$//g<CR>
-
 " Better/Faster window handling
-nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -265,35 +245,6 @@ nnoremap <C-l> <C-w>l
 " {{{ Better folding
 set foldmethod=marker
 set foldlevelstart=0
-
-function! MyFoldText()
-    let line = getline(v:foldstart)
-
-    let nucolwidth = &fdc + &number * &numberwidth
-    let windowwidth = winwidth(0) - nucolwidth - 3
-    let foldedlinecount = v:foldend - v:foldstart
-
-    " expand tabs into spaces
-    let onetab = strpart('          ', 0, &tabstop)
-    let line = substitute(line, '\t', onetab, 'g')
-
-    let line = strpart(line, 0, windowwidth - 2 -len(foldedlinecount))
-    let fillcharcount = windowwidth - len(line) - len(foldedlinecount) - 4
-    return line . '…' . repeat(" ",fillcharcount) . foldedlinecount . '…' . ' '
-endfunction
-set foldtext=MyFoldText()
-" }}}
-
-" {{{ IDE-like home key
-function! s:SmartHome()
-    let ll = strpart(getline('.'), -1, col('.'))
-    if ll =~ '^\s\+$' | normal! 0
-    else | normal! ^
-    endif
-endfunction
-nnoremap <silent>0 :call <SID>SmartHome()<CR>
-nnoremap <silent>H :call <SID>SmartHome()<CR>
-nnoremap L $
 " }}}
 
 let g:netrw_sizestyle="h"
@@ -310,26 +261,6 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " Move to last cursor position
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
-
-" {{{ NFO
-" Common code for encodings
-function! SetFileEncodings(encodings)
-    let b:myfileencodingsbak=&fileencodings
-    let &fileencodings=a:encodings
-endfunction
-function! RestoreFileEncodings()
-    let &fileencodings=b:myfileencodingsbak
-    unlet b:myfileencodingsbak
-endfunction
-
-" .NFO specific
-au BufReadPre *.nfo call SetFileEncodings('cp437')|set ambiwidth=single
-au BufReadPost *.nfo call RestoreFileEncodings()
-" }}}
-
-if (&term =~ "xterm") && (&termencoding == "")
-    set termencoding=utf-8
-endif
 
 " Source local (unversioned) configuration file
 if filereadable(expand("~/.vimrc.local"))
