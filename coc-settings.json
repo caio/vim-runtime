@@ -1,6 +1,6 @@
 {
     "diagnostic.displayByAle": true,
     "coc.preferences.snippets.enable": false,
-    "rust.all_targets": true,
-    "rust.clippy_preference": "on"
+    "rust-analyzer.cargo-watch.command": "clippy",
+    "rust-analyzer.enableCargoWatchOnStartup": "enabled"
 }
