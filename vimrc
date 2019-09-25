@@ -153,7 +153,7 @@ set noswapfile
 set title
 set noerrorbells
 set novisualbell
-set completeopt=menu,preview,longest,menuone
+set completeopt=menu,menuone,noinsert,noselect,preview
 " reducing noise
 set more
 set cmdheight=1
