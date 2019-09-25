@@ -1,6 +1,0 @@
-{
-    "diagnostic.displayByAle": true,
-    "coc.preferences.snippets.enable": false,
-    "rust-analyzer.cargo-watch.command": "clippy",
-    "rust-analyzer.enableCargoWatchOnStartup": "enabled"
-}

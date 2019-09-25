@@ -20,47 +20,19 @@ Plug 'terryma/vim-expand-region'
 vmap v <Plug>(expand_region_expand)
 vmap <S-v> <Plug>(expand_region_shrink)
 
+Plug 'dense-analysis/ale'
 let g:ale_sign_error = 'E'
 let g:ale_sign_warning = 'W'
 let g:ale_set_highlights = 1
 let g:ale_lint_on_enter = 0
-Plug 'dense-analysis/ale'
+let g:ale_completion_enabled = 1
+
+set omnifunc=ale#completion#OmniFunc
 
 nmap <silent> [c <Plug>(ale_previous_wrap)
 nmap <silent> ]c <Plug>(ale_next_wrap)
 nmap <silent> [C <Plug>(ale_previous_wrap_error)
 nmap <silent> ]C <Plug>(ale_next_wrap_error)
-
-if executable("node")
-    let g:coc_start_at_startup = 0
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-    inoremap <silent><expr><TAB> pumvisible() ? "\<C-y>" : "<TAB>"
-
-    " Remap keys for gotos
-    nmap <silent> gd <Plug>(coc-definition)
-    nmap <silent> gy <Plug>(coc-type-definition)
-    nmap <silent> gi <Plug>(coc-implementation)
-    nmap <silent> gr <Plug>(coc-references)
-
-    " Use K to show documentation in preview window
-    nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-    function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-        execute 'h '.expand('<cword>')
-    else
-        call CocAction('doHover')
-    endif
-    endfunction
-
-    " Highlight symbol under cursor on CursorHold
-    set updatetime=300
-    autocmd CursorHold * silent call CocActionAsync('highlight')
-
-    nmap <leader>rn <Plug>(coc-rename)
-    nnoremap <silent><leader>d :<C-u>CocList diagnostics<cr>
-endif
 
 set ttimeoutlen=50
 let g:airline_left_sep=''
