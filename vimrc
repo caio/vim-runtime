@@ -34,16 +34,6 @@ nmap <silent> ]C <Plug>(ale_next_wrap_error)
 if executable("node")
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     let g:coc_start_at_startup = 0
-    set updatetime=300
-
-    nmap <silent> gd <Plug>(coc-definition)
-    nmap <silent> gr <Plug>(coc-references)
-
-    nmap <leader>rn <Plug>(coc-rename)
-    nmap <leader>ac <Plug>(coc-codeaction)
-
-    nnoremap <silent><leader>d :<C-u>CocList diagnostics<cr>
-    nnoremap <silent> K :call <SID>show_documentation()<CR>
 
     function! s:show_documentation()
         if (index(['vim','help'], &filetype) >= 0)
@@ -52,6 +42,23 @@ if executable("node")
             call CocAction('doHover')
         endif
     endfunction
+
+    function! s:start_coc()
+        set updatetime=300
+
+        nmap <silent> gd <Plug>(coc-definition)
+        nmap <silent> gr <Plug>(coc-references)
+
+        nmap <leader>rn <Plug>(coc-rename)
+        nmap <leader>ac <Plug>(coc-codeaction)
+
+        nnoremap <silent><leader>d :<C-u>CocList diagnostics<cr>
+        nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+        call coc#rpc#start_server()
+    endfunction
+
+    command! -nargs=0 IDE :call s:start_coc()
 
     " Highlight symbol under cursor on CursorHold
     autocmd CursorHold * silent call CocActionAsync('highlight')
