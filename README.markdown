@@ -6,15 +6,4 @@ If nodejs is installed, [coc][] is configured. To start it, call `:IDE`.
 
 [coc]: https://github.com/neoclide/coc.nvim
 
-### Rust
-
-I've only used this setup with rust and it works really well with
-[rust-analyzer][ra], so if you have that installed:
-
-  :CocInstall coc-rust-analyzer
-
-Or if you'd rather stick with RLS:
-
-  :CocInstall coc-rls
-
-[ra]: https://github.com/rust-analyzer/rust-analyzer
+I've used this setup successfully with rust, python and typescript.
