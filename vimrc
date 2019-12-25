@@ -13,8 +13,10 @@ Plug 'tpope/vim-git'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'Yggdroot/indentLine'
 Plug 'cohama/lexima.vim'
+
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+Plug 'Yggdroot/indentLine'
 
 Plug 'terryma/vim-expand-region'
 vmap v <Plug>(expand_region_expand)
