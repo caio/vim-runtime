@@ -18,10 +18,6 @@ Plug 'cohama/lexima.vim'
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 Plug 'Yggdroot/indentLine'
 
-Plug 'terryma/vim-expand-region'
-vmap v <Plug>(expand_region_expand)
-vmap <S-v> <Plug>(expand_region_shrink)
-
 let g:ale_sign_error = 'E'
 let g:ale_sign_warning = 'W'
 let g:ale_set_highlights = 1
