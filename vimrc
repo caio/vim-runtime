@@ -172,21 +172,17 @@ set virtualedit+=block
 set shiftround
 set laststatus=2
 
+set foldmethod=marker
+set foldlevelstart=0
+
+set undofile
+set undodir=/tmp,.,~/
+autocmd BufWritePre /tmp/* setlocal noundofile
+
 " List trailing chars
 set list
 set listchars=tab:▸\ ,trail:·,precedes:…,extends:…,nbsp:‗
 
-" Don't reset the column when paging
-set nostartofline
-" }}}
-
-if has("persistent_undo")
-    set undofile
-    set undodir=/tmp,.,~/
-    autocmd BufWritePre /tmp/* setlocal noundofile
-endif
-
-" {{{ Wildmenu
 set wildmenu
 set wildmode=list:longest
 set wildignore+=.hg,.git,.svn
@@ -199,12 +195,16 @@ set wildignore+=*.DS_Store
 set wildignore+=*.luac
 set wildignore+=*.pyc
 set wildignore+=*.class,*.jar
-" }}}
 
 " Appearance
 set background=dark
 set cursorline
 colorscheme nord
+
+" Don't reset the column when paging
+set nostartofline
+" }}}
+
 
 " {{{ Mappings
 inoremap <F1> <ESC>
@@ -246,11 +246,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-" }}}
-
-" {{{ Better folding
-set foldmethod=marker
-set foldlevelstart=0
 " }}}
 
 let g:netrw_sizestyle="h"
