@@ -3,5 +3,6 @@
     "coc.preferences.snippets.enable": false,
     "coc.preferences.jumpCommand": "tab drop",
     "rust-analyzer.cargo-watch.command": "clippy",
-    "rust-analyzer.enableCargoWatchOnStartup": "enabled"
+    "rust-analyzer.cargo-watch.enable": true,
+    "rust-analyzer.cargo-watch.allTargets": true
 }
