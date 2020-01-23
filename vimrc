@@ -85,10 +85,24 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 
+function! s:relative_gfiles()
+    let gitdir = FugitiveGitDir()
+    if len(gitdir)
+        let gitdir = substitute(gitdir, ".git", "", "")
+        let curdir = fnamemodify(expand('%'), ':p:h')
+        let relative_dir = substitute(curdir, gitdir, "", "")
+        execute ":GFiles -- " . relative_dir
+    else
+        :Files
+    endif
+endfunction
+
+command! -nargs=0 GFilesRelative :call s:relative_gfiles()
+
 
 let g:fzf_buffers_jump = 1
 imap <c-x><c-f> <plug>(fzf-complete-path)
-nmap <silent><leader>f :exe 'GFiles -- ' . fnamemodify(expand('%'), ':h')<CR>
+nmap <silent><leader>f :GFilesRelative<CR>
 nmap <silent><leader>F :GFiles<CR>
 nmap <silent><leader>b :Buffers<CR>
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
