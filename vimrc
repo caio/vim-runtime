@@ -50,6 +50,7 @@ if executable("node")
         nmap <leader>rn <Plug>(coc-rename)
         nmap <leader>ac <Plug>(coc-codeaction)
 
+        nnoremap <silent><leader>t :<C-u>CocList -I symbols<cr>
         nnoremap <silent><leader>d :<C-u>CocList diagnostics<cr>
         nnoremap <silent> K :call <SID>show_documentation()<CR>
 
