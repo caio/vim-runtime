@@ -54,13 +54,13 @@ if executable("node")
         nnoremap <silent><leader>d :<C-u>CocList diagnostics<cr>
         nnoremap <silent> K :call <SID>show_documentation()<CR>
 
+        " Highlight symbol under cursor on CursorHold
+        autocmd CursorHold * silent call CocActionAsync('highlight')
+
         call coc#rpc#start_server()
     endfunction
 
     command! -nargs=0 IDE :call s:start_coc()
-
-    " Highlight symbol under cursor on CursorHold
-    autocmd CursorHold * silent call CocActionAsync('highlight')
 endif
 
 set ttimeoutlen=50
