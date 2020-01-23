@@ -91,8 +91,6 @@ imap <c-x><c-f> <plug>(fzf-complete-path)
 nmap <silent><leader>f :exe 'GFiles -- ' . fnamemodify(expand('%'), ':h')<CR>
 nmap <silent><leader>F :GFiles<CR>
 nmap <silent><leader>b :Buffers<CR>
-nmap <silent><leader>t :BTags<CR>
-nmap <silent><leader>T :Tags<CR>
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 
