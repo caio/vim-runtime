@@ -74,9 +74,6 @@ let g:airline#extensions#whitespace#symbol = 'WS'
 let g:airline#extensions#whitespace#show_message = 0
 let g:airline#extensions#branch#enabled = 0
 let g:airline_theme='nord'
-if has("win32unix")
-    let g:airline_theme='badcat'
-endif
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
