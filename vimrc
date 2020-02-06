@@ -88,15 +88,24 @@ let g:go_fmt_command = "goimports"
 function! s:relative_gfiles()
     let gitdir = FugitiveGitDir()
     if len(gitdir)
-        let gitdir = substitute(gitdir, ".git", "", "")
-        let curdir = fnamemodify(expand('%'), ':p:h')
-        let relative_dir = substitute(curdir, gitdir, "", "")
-        execute ":GFiles -- " . relative_dir
+        let gitdir = substitute(gitdir, "/.git", "", "")
+        let curdir = getcwd()
+
+        if curdir == gitdir
+            execute ":GFiles"
+        else
+            let relative_dir = substitute(curdir, gitdir . "/", "", "")
+            execute ":GFiles -- " . relative_dir
+        endif
     else
         :Files
     endif
 endfunction
 
+" GFilesRelative:
+" * Outside of a git repo: `:Files`
+" * In the root of a git repo: `:Gfiles`
+" * In a subtree of a git repo: `:Gfiles -- subtree`
 command! -nargs=0 GFilesRelative :call s:relative_gfiles()
 
 
