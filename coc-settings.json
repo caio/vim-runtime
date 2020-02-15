@@ -2,6 +2,7 @@
     "diagnostic.displayByAle": true,
     "coc.preferences.snippets.enable": false,
     "coc.preferences.jumpCommand": "tab drop",
+    "rust-analyzer.raLspServerPath": "~/bin/ra_lsp_server",
     "rust-analyzer.cargo-watch.command": "clippy",
     "rust-analyzer.cargo-watch.enable": true,
     "rust-analyzer.cargoFeatures.allFeatures": true,
