@@ -110,6 +110,7 @@ command! -nargs=0 GFilesRelative :call s:relative_gfiles()
 
 
 let g:fzf_buffers_jump = 1
+let g:fzf_preview_window = ''
 imap <c-x><c-f> <plug>(fzf-complete-path)
 nmap <silent><leader>f :GFilesRelative<CR>
 nmap <silent><leader>F :GFiles<CR>
