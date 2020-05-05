@@ -28,6 +28,7 @@ nmap <silent> [c <Plug>(ale_previous_wrap)
 nmap <silent> ]c <Plug>(ale_next_wrap)
 nmap <silent> [C <Plug>(ale_previous_wrap_error)
 nmap <silent> ]C <Plug>(ale_next_wrap_error)
+nmap <silent> <leader>D :ALEDetail<CR>
 
 if executable("node")
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
