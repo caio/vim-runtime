@@ -22,6 +22,7 @@ let g:ale_sign_error = 'E'
 let g:ale_sign_warning = 'W'
 let g:ale_set_highlights = 1
 let g:ale_lint_on_enter = 0
+let g:ale_disable_lsp = 1
 Plug 'dense-analysis/ale'
 
 nmap <silent> [c <Plug>(ale_previous_wrap)
